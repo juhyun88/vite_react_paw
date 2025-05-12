@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "image": "https://pawfectwave.vercel.app/img/main/Main_background1.jpg",
+      "mainText": "Love",
+      "subText": "사라지지 않는 사랑, 기억은 영원히 남습니다",
+      "leftButton": "memory",
+      "rightButton": "greeting"
+    },
+    {
+      "id": 2,
+      "image": "https://pawfectwave.vercel.app/img/main/Main_background2.jpg",
+      "mainText": "greeting",
+      "subText": "사라지지 않는 사랑, 기억은 영원히 남습니다",
+      "leftButton": "Love",
+      "rightButton": "memory"
+    },
+    {
+      "id": 3,
+      "image": "https://pawfectwave.vercel.app/img/main/Main_background3.jpg",
+      "mainText": "memory",
+      "subText": "사라지지 않는 사랑, 기억은 영원히 남습니다",
+      "leftButton": "greeting",
+      "rightButton": "Love"
+    }
+  ]

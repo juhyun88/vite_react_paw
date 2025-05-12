@@ -1,0 +1,43 @@
+[
+    {
+      "title": "브랜드소개",
+      "links": [
+        { "name": "브랜드 스토리", "path": "/brendstory" },
+        { "name": "기부캠페인", "path": "/campain" }
+      ]
+    },
+    {
+      "title": "장례서비스",
+      "links": [
+        { "name": "장례절차", "path": "/procedures" },
+        { "name": "일반장례 비용", "path": "/price" },
+        { "name": "스톤 장례 비용", "path": "/stoneprice" }
+      ]
+    },
+    {
+      "title": "지점안내",
+      "links": [
+        { "name": "지점 및 시설", "path": "/store" },
+        { "name": "오시는길", "path": "/way" }
+      ]
+    },
+    {
+      "title": "부가서비스",
+      "links": [
+        { "name": "운구서비스", "path": "/service" },
+        { "name": "비동행 장례서비스", "path": "/service" },
+        { "name": "봉안당(산골)", "path": "/service" },
+        { "name": "사이버추모관", "path": "/cybermemorial" }
+      ]
+    },
+    {
+      "title": "고객지원센터",
+      "links": [
+        { "name": "펫&로스케어", "path": "/petlose" },
+        { "name": "펫&보험", "path": "/insurance" },
+        { "name": "펫&협력병원", "path": "/hospital" },
+        { "name": "Q&A", "path": "/question" }
+      ]
+    }
+  ]
+

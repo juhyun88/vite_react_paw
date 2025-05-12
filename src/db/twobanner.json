@@ -1,0 +1,20 @@
+{
+    "banners": [
+      {
+        "id": "banner1",
+        "link": "#",
+        "textLarge": "첫 만남 <span class='bigfont'>'안녕'</span>의 순간부터 행복했던 모든 추억을<br />나누고 위로와 추모를 함께하겠습니다.",
+        "textSmall": "사랑하는 반려동물과 걸어온 모든 순간의<br /> 소중한 편지를 추모관에서 전시하고 있습니다.",
+        "mobileText": "첫 만남 <span class='bigfont'>'안녕'</span>의 순간부터<br />행복했던 모든 추억을<br />함께하겠습니다.",
+        "className": "ehcontentBanner1"
+      },
+      {
+        "id": "banner2",
+        "textLarge": "마지막 이별의 순간을 방해받지 않도록,<br />독립된 공간에서 진행하고 있습니다.",
+        "textSmall": "단독 추모실과 참관실로 아이와 보호자님의 온전하고 편안한<br />시간을 위한 안락하고 따뜻한 공간들이 준비되어 있습니다.",
+        "mobileText": "마지막 이별의 순간,<br />독립된 공간에서 <br />진행하고 있습니다.",
+        "className": "ehcontentBanner2"
+      }
+    ]
+  }
+  

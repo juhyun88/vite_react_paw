@@ -1,0 +1,47 @@
+{
+    "snslink" : [
+    {
+      "to": "#",
+      "className": "blog",
+      "imgSrc": "https://pawfectwave.vercel.app/img/icon/footer_blog.svg",
+      "alt": "블로그 바로가기"
+    },
+    {
+      "to": "#",
+      "className": "insta",
+      "imgSrc": "https://pawfectwave.vercel.app/img/icon/footer_instagram.svg",
+      "alt": "인스타그램 바로가기"
+    },
+    {
+      "to": "#",
+      "className": "facebook",
+      "imgSrc": "https://pawfectwave.vercel.app/img/icon/footer_facebook.svg",
+      "alt": "페이스북 바로가기"
+    },
+    {
+      "to": "#",
+      "className": "youtube",
+      "imgSrc": "https://pawfectwave.vercel.app/img/icon/footer_youtube.svg",
+      "alt": "유튜브 바로가기"
+    }
+  ],
+  "fnavi" : [
+    {
+      "to": "/term",
+      "text": "이용약관"
+    },
+    {
+      "to": "#",
+      "text": "개인정보처리방침"
+    },
+    {
+      "to": "#",
+      "text": "파우펙트 웨이브 정책"
+    },
+    {
+      "to": "#",
+      "text": "제휴제안"
+    }
+  ]
+  
+}
