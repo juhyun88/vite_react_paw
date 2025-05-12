@@ -1,0 +1,29 @@
+[
+  {
+    "id": "love",
+    "imgSrc": "https://pawfectwave.vercel.app/img/main_ci/love_1.png",
+    "alt": "eunhye_love",
+    "lottieSrc": "https://lottie.host/73e1b71a-a2a3-46b4-8bfa-ace4db272abf/AY9ai5onYv.lottie",
+    "title": "사랑",
+    "description": "사랑은 가족의 일원으로서 사랑과 보살핌을 받으며 소중한 시간을 함께한 존재로써 사랑의 마음으로 서로 메세지를 나누는 시간과 되새기는 시간을 의미합니다.",
+    "reverse": false
+  },
+  {
+    "id": "hello",
+    "imgSrc": "https://pawfectwave.vercel.app/img/main_ci/Hello_2.png",
+    "alt": "eunhye_hello",
+    "lottieSrc": "https://lottie.host/3b0c53d9-de38-4137-93d7-6d0a248d2b43/kEG79mLDll.lottie",
+    "title": "인사",
+    "description": "인사는 마지막 여행을 떠나는 반려동물에게 단순한 작별 인사가 아닌 반려동물의 삶과 마지막 여행에 대한 마음을 담았습니다.",
+    "reverse": true
+  },
+  {
+    "id": "memories",
+    "imgSrc": "https://pawfectwave.vercel.app/img/main_ci/Memories_3.png",
+    "alt": "eunhye_Memories",
+    "lottieSrc": "",
+    "title": "추억",
+    "description": "추억은 반려동물의 처음과 끝을 함께하며 많은 추억을 공유했던 소중한 시간들을 기념하는 의미를 담았습니다.",
+    "reverse": false
+  }
+]

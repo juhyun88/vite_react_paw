@@ -1,0 +1,37 @@
+{
+    "videos": [
+      {
+        "id": "video1",
+        "title": "Petros Care",
+        "subtitle": "펫로스 케어",
+        "description": "펫로스 증후군으로 인한 마음의 치유가<br />필요한 보호자님을 위한 케어 입니다.",
+        "videoSrc": "https://www.youtube.com/embed/4o-n_v1mKSw?start=1",
+        "buttons": [
+
+          {
+            "text": "자세히보기",
+            "icon": "bi bi-arrow-right",
+            "link": "/page/petlose.php"
+          }
+        ],
+        "reverse": false
+      },
+      {
+        "id": "video2",
+        "title": "Pawfect & Pet Wave",
+        "subtitle": "파우펙트 & 펫 웨이브",
+        "description": "생애의 모든 순간을 함께하는, 당신의 반려동물 케어 파트너<br />동물의료센터와 함께해 건강 관리부터 마지막 순간까지 함께<br />해드립니다.",
+        "videoSrc": "https://www.youtube.com/embed/r7yAhSSaH3c?start=1",
+        "buttons": [
+          {
+            "text": "자세히보기",
+            "icon": "bi bi-arrow-left",
+            "link": "/page/hospital.php"
+          }
+  
+        ],
+        "reverse": true
+      }
+    ]
+  }
+  

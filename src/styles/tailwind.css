@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ✅ 폰트 임포트 */
+/* 폰트 임포트 */
 @font-face {
   font-family: 'Paperlogy-8ExtraBold';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
@@ -51,7 +51,7 @@
   font-style: normal;
 }
 
-/* ✅ 전역 변수 */
+/* 전역 변수 */
 :root {
   --MainBrownLight: #A97D5E;
   --Primery: #006838;
@@ -62,12 +62,12 @@
   --basic-text-color: #000;
 }
 
-/* ✅ 기본 body 폰트 */
+/* 기본 body 폰트 */
 body {
   font-family: "Paperlogy 3 Light";
 }
 
-/* ✅ 공통 클래스 */
+/* 공통 클래스 */
 .main-primery {
   color: var(--Primery);
 }
