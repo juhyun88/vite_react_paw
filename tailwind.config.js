@@ -7,10 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primery: "var(--Primery)",
-        mainBrownLight: "var(--MainBrownLight)",
+        primary: "var(--primary)",
+        mainBrownLight: "var(--main-brown-light)",
         textColor: "var(--text-color)",
         light: "var(--light-color)",
+        highlight: "var(--highlight-color)",
+        basicText: "var(--basic-text-color)",
+      },
+      borderRadius: {
+        custom: "var(--border-radius)",
       },
       fontFamily: {
         thin: ["'Paperlogy 1 Thin'", "sans-serif"],
@@ -21,10 +26,15 @@ export default {
         semibold: ["'Paperlogy 6 SemiBold'", "sans-serif"],
         bold: ["'Paperlogy 7 Bold'", "sans-serif"],
         mango: ["'MangoDdobak-B'", "sans-serif"],
+        r3: ["'Paperlogy 3 Light'", "sans-serif"],
+        r4: ["'Paperlogy 4 Regular'", "sans-serif"],
+        r6: ["'Paperlogy 6 SemiBold'", "sans-serif"],
       },
-      borderRadius: {
-        DEFAULT: "var(--border-radius)",
-      },
+      maxWidth: {
+        container: "1400px",
+        large: "1920px"
+      },     
+      
     },
   },
   plugins: [],

@@ -1,7 +1,18 @@
-:root {
-  
-}
+:root{
+    --main-brown-light: #A97D5E;
+    --primary: #006838;
+    --light-color: #93ab9d;
+    --text-color: #1E1E1E;
+    --highlight-color: #007bff;
+    --border-radius: 10px;
+    --basic-text-color: #000;
+  }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+  background-color: #1E1E1E;
+}
+
