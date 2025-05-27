@@ -10,12 +10,14 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({ children, className }) => {
   return (
-    <div className={`relative flex flex-col min-h-screen  ${className}`}
-    style={{ backgroundImage: `url('https://pawfectwave.vercel.app/img/main/Main_background1.jpg')` }}> 
+    <div className={`relative flex flex-col min-h-screen bg-transparent  ${className}`}> 
       <Hd />
-      <main className="z-0">{children}</main>
+      
+      <main className="">{children} <Quick />
+      </main>
+      
       <Ft />
-      <Quick />
+      
     </div>
   );
 };

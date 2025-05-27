@@ -11,9 +11,9 @@ const menuData = naviData;
 
 const Header: React.FC = () => {
     return (
-        <header className="xl:px-[50px] z-50 ">
+        <header className="xl:px-[50px] z-20 fixed left-0 right-0 top-0">
             <div className="flex justify-between items-stretch ">
-                <h1 className="mb-0 flex flex-col justify-center ">
+                <h1 className="mb-0 flex flex-col justify-center z-20 ">
                     <a href="/" className="logo_container flex items-center gap-2 text-white">   
                      
                         <CI></CI>
@@ -53,7 +53,7 @@ const Header: React.FC = () => {
                     </button> */}
                 </div>
 
-                <div className="flex items-center ">
+                <div className="flex items-center z-20 ">
                     <ul className="reservation flex justify-end items-center mb-0 p-0 gap-[30px]">
                         <li>
                         <Link to="/openapi/map">
@@ -82,6 +82,10 @@ const Header: React.FC = () => {
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div className='relative flex justify-between h-[1px]'>
+                <div className=''>이미지</div>
+                <div className=''>이미지</div>
             </div>
         </header>
     );

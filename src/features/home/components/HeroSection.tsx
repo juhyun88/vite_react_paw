@@ -1,5 +1,8 @@
 import React from 'react';
 
+import 'swiper/css';
+
+
 
 interface HeroSectionProps {
   children?: React.ReactNode;
@@ -9,13 +12,12 @@ interface HeroSectionProps {
 const HeroSection: React.FC<HeroSectionProps> = ({ children, className = '' }) => {
   return (
     <section
-      className={`hero-section relative bg-cover bg-center min-h-screen ${className}`}
-     
-    >
+      className={`hero-section  bg-cover bg-center min-h-screen z-0 ${className}`}
+      style={{ backgroundImage: `url('https://pawfectwave.vercel.app/img/main/Main_background1.jpg')` }}    >
       {children}
 
       {/* 하단 영역 */}
-      <div className="absolute bottom-0 left-0 right-0 bg-ftcolor backdrop-blur-md p-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="fixed bottom-0 left-0 right-0 bg-ftcolor backdrop-blur-md p-4 flex flex-col md:flex-row items-center justify-between gap-4">
         {/* 온라인추모관 버튼 */}
         <button className="bg-transparent text-mainbutton px-4 py-2 border-[3px] border-mainbutton rounded-full  w-[196px] h-[55px]">
           온라인추모관
