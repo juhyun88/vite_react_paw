@@ -1,14 +1,21 @@
+import React from "react";
+
 import HeroSection from './components/HeroSection'
 import IntroSection from './components/IntroSection'
 import InfoHighlightSection from './components/InfoHighlightSection'
 import SnsSection from './components/SnsSection'
 import CampaignSection from './components/CampaignSection'
-import QustionSection from './components/QustionSection'    
+import QustionSection from './components/QustionSection'  
 
-const Home = () => {
+type HomeProps = {
+  children?: React.ReactNode;
+  className?: string;
+};
+
+const Home: React.FC<HomeProps> = ({ children, className }) => {
   return (
-    <div className="space-y-20">
-      <HeroSection />
+    <div className={`relative flex flex-col ${className}`}>
+      <HeroSection className="z-0">{children}</HeroSection>
       <IntroSection />
       <InfoHighlightSection />
       <QustionSection />
@@ -19,3 +26,10 @@ const Home = () => {
 }
 
 export default Home
+
+
+
+
+
+
+
