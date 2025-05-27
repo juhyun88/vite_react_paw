@@ -14,12 +14,6 @@
     },
     {
       "to": "#",
-      "className": "facebook",
-      "imgSrc": "https://pawfectwave.vercel.app/img/icon/footer_facebook.svg",
-      "alt": "페이스북 바로가기"
-    },
-    {
-      "to": "#",
       "className": "youtube",
       "imgSrc": "https://pawfectwave.vercel.app/img/icon/footer_youtube.svg",
       "alt": "유튜브 바로가기"
