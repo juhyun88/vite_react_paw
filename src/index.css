@@ -9,6 +9,7 @@
     --ft-color: #C3B3A3;
     --mint: #A3D9C6;
     --fttextcolor:#3A3A3A;
+    --mainbutton:#4C9C8B;
   }
 
 @tailwind base;
@@ -16,10 +17,13 @@
 @tailwind utilities;
 
 body{
-  background-color: #1E1E1E;
+  background-color: transparent;
+  font-family: 'Paperlogy';
+  font-weight: 300;
 }
 .gnb_ul > li{
   transition: 0.5s;
+  
 }
 .gnb_ul:before{
   content: "";
@@ -39,6 +43,8 @@ body{
   visibility: hidden;
   opacity: 0;
   transition: 0.5s;
+  font-family: 'Paperlogy';
+  font-weight: 300;
 }
 .gnb_ul:hover > li {
   padding: 0 50px;
@@ -47,6 +53,8 @@ body{
   display: block;
   visibility: visible;
   opacity: 1;
+  font-family: 'Paperlogy';
+  font-weight: 300;
 }
 .gnb_ul > li:after{
   content: "";
@@ -80,3 +88,12 @@ body{
   height: 300px;
 }
 
+.semibold {
+  font-family: 'Paperlogy' !important;
+  font-weight: 600;
+}
+
+.regular{
+  font-family: 'Paperlogy';
+  font-weight: 400;
+}

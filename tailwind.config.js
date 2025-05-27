@@ -15,28 +15,29 @@ export default {
         basicText: "var(--basic-text-color)",
         ftcolor: "var(--ft-color)",
         mint:"var(--mint)",
-        fttextcolor:"var(--fttextcolor)"
+        fttextcolor:"var(--fttextcolor)",
+        mainbutton:"var(--mainbutton)"
       },
       borderRadius: {
         custom: "var(--border-radius)",
       },
       fontFamily: {
-        thin: ["'Paperlogy 1 Thin'", "sans-serif"],
-        extralight: ["'Paperlogy 2 ExtraLight'", "sans-serif"],
-        light: ["'Paperlogy 3 Light'", "sans-serif"],
-        regular: ["'Paperlogy 4 Regular'", "sans-serif"],
-        medium: ["'Paperlogy 5 Medium'", "sans-serif"],
-        semibold: ["'Paperlogy 6 SemiBold'", "sans-serif"],
-        bold: ["'Paperlogy 7 Bold'", "sans-serif"],
-        mango: ["'MangoDdobak-B'", "sans-serif"],
-        r3: ["'Paperlogy 3 Light'", "sans-serif"],
-        r4: ["'Paperlogy 4 Regular'", "sans-serif"],
-        r6: ["'Paperlogy 6 SemiBold'", "sans-serif"],
+        thin: ['Paperlogy', "sans-serif"],
+        extralight: ['Paperlogy', "sans-serif"],
+        light: ['Paperlogy', "sans-serif"],
+        regular: ['Paperlogy', "sans-serif"],
+        medium: ['Paperlogy', "sans-serif"],
+        semibold: ['Paperlogy', "sans-serif"],
+        bold: ['Paperlogy', "sans-serif"],
+        mango: ['MangoDdobak-B', "sans-serif"],
       },
       maxWidth: {
         container: "1400px",
         large: "1920px"
       },     
+      fontSize: {
+        '41px': '41px',
+      },
       
     },
   },
