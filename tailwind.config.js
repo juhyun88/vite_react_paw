@@ -13,6 +13,9 @@ export default {
         light: "var(--light-color)",
         highlight: "var(--highlight-color)",
         basicText: "var(--basic-text-color)",
+        ftcolor: "var(--ft-color)",
+        mint:"var(--mint)",
+        fttextcolor:"var(--fttextcolor)"
       },
       borderRadius: {
         custom: "var(--border-radius)",

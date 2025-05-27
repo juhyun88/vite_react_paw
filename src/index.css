@@ -6,6 +6,9 @@
     --highlight-color: #007bff;
     --border-radius: 10px;
     --basic-text-color: #000;
+    --ft-color: #C3B3A3;
+    --mint: #A3D9C6;
+    --fttextcolor:#3A3A3A;
   }
 
 @tailwind base;
@@ -14,5 +17,66 @@
 
 body{
   background-color: #1E1E1E;
+}
+.gnb_ul > li{
+  transition: 0.5s;
+}
+.gnb_ul:before{
+  content: "";
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  height:0;
+  background-color:rgba(31, 59, 32, 0.35);
+  transition: 0.5s;
+}
+.gnb_ul:hover:before{
+  height:300px;
+}
+.gnb_ul > li >ul{
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.gnb_ul:hover > li {
+  padding: 0 50px;
+}
+.gnb_ul:hover > li> ul{
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+.gnb_ul > li:after{
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: rgba(255,255,255,0.5);
+  position: absolute;
+  left:0;
+  right:0;
+  top:100%;
+  transition: 0.5s;
+  margin:0 auto
+}
+.gnb_ul > li:before{
+  content: "";
+  display: block;
+  height: 0;
+  background-color: rgba(31, 59, 32, 0.5);
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  transition: 0.5s;
+
+}
+.gnb_ul > li:hover:after{
+  width: 100%;
+}
+.gnb_ul > li:hover:before{
+  height: 300px;
 }
 

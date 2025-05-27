@@ -60,6 +60,9 @@
   --highlight-color: #007bff;
   --border-radius: 10px;
   --basic-text-color: #000;
+  --ft-color: #C3B3A3;
+  --mint: #A3D9C6;
+  --fttextcolor:#3A3A3A;
 }
 
 /* 기본 body 폰트 */
@@ -98,4 +101,7 @@ body {
 }
 .bigfont {
   font-family: "Paperlogy 6 SemiBold" !important;
+}
+.ftcolor{
+  background-color: var(--ftcolor);
 }
