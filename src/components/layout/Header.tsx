@@ -16,8 +16,8 @@ const Header: React.FC<HeaderProps> = ({ menuArr }) => {
    const parentMenus = menuArr.filter(menu => String(menu.code).length === 3);  
  
     return (
-        <header className="xl:px-[50px] z-20 fixed left-0 right-0 top-0">
-            <div className="flex justify-between items-stretch ">
+        <header className="px-[30px] xl:px-[50px] z-20 fixed left-0 right-0 top-0">
+            <div className="flex justify-between items-stretch  pt-[26px]">
                 <h1 className="mb-0 flex flex-col justify-center z-20 ">
                     <a href="/" className="logo_container flex items-center gap-2 text-white">   
                      
@@ -28,14 +28,14 @@ const Header: React.FC<HeaderProps> = ({ menuArr }) => {
                     </a>
                 </h1>
 
-                <div className="hamburger-menu md:hidden " id="allmenu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div className="hamburger-menu flex flex-col gap-[6px] lg:hidden w-[35px] justify-center" id="allmenu">
+                    <span className='bg-white h-[3px]'></span>
+                    <span className='bg-white h-[3px]'></span>
+                    <span className='bg-white h-[3px]'></span>
                 </div>
 
-                <div className="topmenu flex justify-center items-center ">
-                    <ul className="flex flex-col md:flex-row h-full gnb_ul" >
+                <div className="topmenu lg:flex justify-center items-center hidden ">
+                    <ul className="flex flex-col lg:flex-row h-full gnb_ul " >
                     {parentMenus &&
                         parentMenus.map((d1menu) => {
                           // 하위 메뉴 필터링: code가 6자리이면서 앞 3자리가 d1menu.code와 같은 것
@@ -64,7 +64,7 @@ const Header: React.FC<HeaderProps> = ({ menuArr }) => {
                                   <li key={submenu.code}>
                                     <Link
                                       to={submenu.path ?? "#none"} // ✅ submenu.link가 path임
-                                      className="text-white whitespace-nowrap py-[10px] block font-light"
+                                      className="text-topcolor whitespace-nowrap py-[10px] block font-light"
                                     >
                                       {submenu.title}
                                     </Link>
@@ -75,14 +75,20 @@ const Header: React.FC<HeaderProps> = ({ menuArr }) => {
                           </li>
                         );
   })}
-     </ul>
+                    </ul>
+                    <div className='topmenuleft absolute left-[114px] top-full mt-2 hidden transition-all  duration-300 z-0'>
+                    <img src="https://pawfectwave.vercel.app/img/maintop/onlinehall.jpg" alt="이미지1"className="w-full h-full object-cover" />
+                    </div>
+                    <div className='topmenuright absolute right-[50px] top-full mt-2 hidden transition-all duration-300 z-0'>
+                    <img src="https://pawfectwave.vercel.app/img/maintop/doctor2.jpg" alt="이미지1"className="w-full h-full object-cover" />
+                    </div>
 
                     {/* <button className="closebtn lg:hidden md:block">
                     <img src="https://pawfectwave.vercel.app/img/svg/X boxbutton_line.svg" alt="닫기 버튼" />
                     </button> */}
                 </div>
 
-                <div className="flex items-center z-20 ">
+                <div className="hidden lg:flex items-center z-20 ">
                     <ul className="reservation flex justify-end items-center mb-0 p-0 gap-[30px]">
                         <li>
                         <Link to="/openapi/map">
@@ -112,10 +118,7 @@ const Header: React.FC<HeaderProps> = ({ menuArr }) => {
                     </ul>
                 </div>
             </div>
-            <div className='relative flex justify-between h-[1px]'>
-                <div className=''>이미지</div>
-                <div className=''>이미지</div>
-            </div>
+            
         </header>
     );
 }
