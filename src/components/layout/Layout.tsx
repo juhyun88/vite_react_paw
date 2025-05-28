@@ -5,17 +5,19 @@ import Quick from "./QuickMenu.tsx";
 
 type LayoutProps = {
   children: React.ReactNode;
-  className?: string;
+  mclassName?: string;
+  cclassName? : string;
 };
 
-const Layout: React.FC<LayoutProps> = ({ children, className }) => {
+const Layout: React.FC<LayoutProps> = ({ children, mclassName, cclassName }) => {
   return (
-    <div className={`relative flex flex-col min-h-screen bg-transparent  ${className}`}> 
+    <div className={`relative flex flex-col min-h-screen  ${mclassName}`}> 
       <Hd />
       
-      <main className="">{children} <Quick />
-      </main>
-      
+      <div className={cclassName} >
+         {children} 
+      </div>
+      <Quick />
       <Ft />
       
     </div>

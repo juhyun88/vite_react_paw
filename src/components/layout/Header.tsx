@@ -1,15 +1,49 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import naviData from '../../db/navi.json';
+
+
+// import naviData from '../../db/navi.json';
+
+
+
+import type { Database } from '../../types/supabase.types';
+type Menu = Database['public']['Tables']['menu']['Row'];
+import { fetchData } from '../../lib/crud';
 
 import CI  from '../ui/CI';
 import Logotext  from '../ui/Logotext';
 
-// 메뉴 데이터 정의
-const menuData = naviData;
+
 
 
 const Header: React.FC = () => {
+    const [menus, setMenus] = useState<Menu[]>([]);
+    const [parentMenus, setParentMenus] = useState<Menu[]>([]);
+
+    useEffect(() => {
+    const loadMenus = async () => {
+      const data = await fetchData('menu');
+      setMenus(data);
+    };
+
+    loadMenus();    
+  }, []);
+
+  useEffect(() => {
+    if (!menus || menus.length === 0) return;
+  
+    const parents = menus
+      .filter(menu => String(menu.code).length === 3)
+      .map(parent => ({
+        ...parent,
+        links: menus.filter(
+          child =>
+            String(child.code).length === 6 &&
+            String(child.code).startsWith(String(parent.code))
+        ),
+      }));  
+    setParentMenus(parents);
+  }, [menus]);
     return (
         <header className="xl:px-[50px] z-20 fixed left-0 right-0 top-0">
             <div className="flex justify-between items-stretch ">
@@ -31,21 +65,51 @@ const Header: React.FC = () => {
 
                 <div className="topmenu flex justify-center items-center ">
                     <ul className="flex flex-col md:flex-row h-full gnb_ul" >
-                    {menuData.map((menu, index) => (
-                        <li key={index} className="relative text-center px-[33px]  py-0 h-full transition-all duration-300 ease-in-out">
-                            <Link to="" className="flex justify-center items-center text-white font-semibold text-[21px] whitespace-nowrap h-full py-[28px] relative">
-                                {menu.title}
-                            </Link>
+                    {parentMenus &&
+  parentMenus.map((d1menu) => {
+    // 하위 메뉴 필터링: code가 6자리이면서 앞 3자리가 d1menu.code와 같은 것
+    const subMenus = menus.filter(
+      (menu) =>
+        String(menu.code).length === 6 &&
+        String(menu.code).startsWith(String(d1menu.code))
+    );
 
-                            <ul className="absolute text-white p-0 m-0 left-0 right-0 top-100  py-[18px]">
-                                {menu.links.map((link, idx) => (
-                                <li key={idx}>
-                                    <Link to={link.path} className='text-white whitespace-nowrap py-[10px] block font-light'>{link.name}</Link>
-                                </li>
-                                ))}
-                            </ul>
-                        </li>
-                    ))}
+    return (
+      <li
+        key={d1menu.code}
+        className="relative text-center px-[33px] py-0 h-full transition-all duration-300 ease-in-out"
+      >
+        <Link
+          to={d1menu.path ?? "#none"}
+          className="flex justify-center items-center text-white font-semibold text-[21px] whitespace-nowrap h-full py-[28px] relative"
+        >
+          {d1menu.title}
+        </Link>
+
+        {/* 하위 메뉴 존재할 경우만 출력 */}
+        {subMenus.length > 0 && (
+          <ul className="absolute text-white p-0 m-0 left-0 right-0 top-100 py-[18px]  bg-opacity-80 z-10">
+            {subMenus.map((submenu, idx) => (
+              <li key={idx}>
+                <Link
+                  to={submenu.path ?? "#none"} // ✅ submenu.link가 path임
+                  className="text-white whitespace-nowrap py-[10px] block font-light"
+                >
+                  {submenu.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </li>
+    );
+  })}
+
+
+                   
+              
+                      
+                   
                     </ul>
 
                     {/* <button className="closebtn lg:hidden md:block">
