@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Home from "./features/home/Home";
+import SubRouter from './routes/SubRouter';
 
 
 import { Menu } from './types/common';
@@ -36,9 +37,10 @@ function App({ mclassName, cclassName }: { mclassName: string; cclassName: strin
             <Route
               key={menu.code}
               path={menu.path!} // path는 null 체크 완료됨
-              element={<div>{menu.title}</div>}
+              element={<SubRouter menu={menu}  />}
             />
           ))}
+          <Route path="*" element={<div className='min-h-screen flex flex-col  items-center justify-center bg-primary text-white'>404페이지 만들어주세요. 팀소개페이지진행하면 좋겠어요</div>} />
       </Routes>
 
     </Layout>
