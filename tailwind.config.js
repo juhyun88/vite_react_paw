@@ -17,7 +17,8 @@ export default {
         mint:"var(--mint)",
         fttextcolor:"var(--fttextcolor)",
         mainbutton:"var(--mainbutton)",
-        quickcolor:"var(--quickcolor)"
+        quickcolor:"var(--quickcolor)",
+        topcolor:"var(--topcolor)"
       },
       borderRadius: {
         custom: "var(--border-radius)",
