@@ -45,11 +45,37 @@ export default {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         },
+         rotate45: {
+          '0%': { transform: 'rotate(-10deg)' },
+          '50%': { transform: 'rotate(10deg)' },
+          '100%': { transform: 'rotate(-10deg)' },
+        },
+        rotate40: {
+          '0%': { transform: 'rotate(-20deg)' },
+          '50%': { transform: 'rotate(20deg)' },
+          '100%': { transform: 'rotate(-20deg)' },
+        },
+         // 1. 부드럽게 커졌다 작아지기 (심장 박동 느낌)
+        pulseScale: {
+          '0%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.1)' },
+          '100%': { transform: 'scale(1)' },
+        },
+          // 2. 빠르게 커졌다 줄어드는 효과
+        pop: {
+          '0%': { transform: 'scale(1)' },
+          '30%': { transform: 'scale(1.2)' },
+          '60%': { transform: 'scale(0.95)' },
+          '100%': { transform: 'scale(1)' },
+        },
       },
       animation: {
         float: 'float 3s ease-in-out infinite',
-      },
-      
+        rotate45: 'rotate45 2s ease-in-out infinite',
+        rotate40: 'rotate40 1s ease-in-out infinite',
+         pulseScale: 'pulseScale 1.5s ease-in-out infinite',
+         pop: 'pop 0.6s ease-in-out infinite',
+      },      
     },
   },
   plugins: [],
