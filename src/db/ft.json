@@ -1,5 +1,11 @@
 {
     "snslink" : [
+         {
+      "to": "#",
+      "className": "youtube",
+      "imgSrc": "https://pawfectwave.vercel.app/img/icon/footer_youtube.svg",
+      "alt": "유튜브 바로가기"
+    },
     {
       "to": "#",
       "className": "blog",
@@ -11,13 +17,8 @@
       "className": "insta",
       "imgSrc": "https://pawfectwave.vercel.app/img/icon/footer_instagram.svg",
       "alt": "인스타그램 바로가기"
-    },
-    {
-      "to": "#",
-      "className": "youtube",
-      "imgSrc": "https://pawfectwave.vercel.app/img/icon/footer_youtube.svg",
-      "alt": "유튜브 바로가기"
     }
+ 
   ],
   "fnavi" : [
     {
