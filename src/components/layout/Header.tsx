@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ menuArr }) => {
   
 
     return (
-        <header className="px-[30px] xl:px-[50px] z-20 fixed left-0 right-0 top-0">
+        <header className="px-[16px] md:px-[30px] xl:px-[50px] z-20 fixed left-0 right-0 top-0">
             <div className="flex justify-between items-center  pt-[26px]">
                 <h1 className="mb-0 flex flex-col justify-center z-20 xl:h-[55px] h-[40px]">
                     <a href="/" className="logo_container flex items-center gap-2 text-white h-full">   
