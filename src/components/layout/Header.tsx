@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ menuArr }) => {
   
 
     return (
-        <header className="px-[16px] md:px-[30px] xl:px-[50px] z-20 fixed left-0 right-0 top-0">
+        <header className="px-[15px] md:px-[30px] xl:px-[50px] z-20 fixed left-0 right-0 top-0">
             <div className="flex justify-between items-center  pt-[26px]">
                 <h1 className="mb-0 flex flex-col justify-center z-20 xl:h-[55px] h-[40px]">
                     <a href="/" className="logo_container flex items-center gap-2 text-white h-full">   
@@ -46,13 +46,13 @@ const Header: React.FC<HeaderProps> = ({ menuArr }) => {
                 <div className="flex lg:hidden z-50">
                     {/* 햄버거 버튼 */}
                     <div
-                      className="hamburger-menu flex flex-col gap-[6px] w-[35px] justify-center cursor-pointer"
+                      className="hamburger-menu flex flex-col gap-[6px] w-[29px] justify-center cursor-pointer"
                       onClick={() => setIsMenuOpen(true)}
                       id="allmenu"
                     >
-                      <span className="bg-white h-[4px] rounded block"></span>
-                      <span className="bg-white h-[4px] rounded block"></span>
-                      <span className="bg-white h-[4px] rounded block"></span>
+                      <span className="bg-white h-[3px] rounded block"></span>
+                      <span className="bg-white h-[3px] rounded block"></span>
+                      <span className="bg-white h-[3px] rounded block"></span>
                     </div>
 
                     {/* 모바일 메뉴 */}
@@ -182,7 +182,7 @@ const Header: React.FC<HeaderProps> = ({ menuArr }) => {
                     <div className='topmenuleft absolute left-[114px] top-full mt-2 hidden transition-all  duration-300 z-0'>
                     <img src="https://pawfectwave.vercel.app/img/maintop/onlinehall.jpg" alt="이미지1"className="w-full h-full object-cover" />
                     </div>
-                    <div className='topmenuright absolute right-[50px] top-full mt-2 hidden transition-all duration-300 z-0'>
+                    <div className='topmenuright absolute right-[75px] top-full mt-2 hidden transition-all duration-300 z-0'>
                     <img src="https://pawfectwave.vercel.app/img/maintop/doctor2.jpg" alt="이미지1"className="w-full h-full object-cover" />
                     </div>
 

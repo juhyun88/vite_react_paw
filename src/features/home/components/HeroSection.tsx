@@ -1,44 +1,49 @@
 import React from 'react';
 import { useEffect, useState } from "react";
-import 'swiper/css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
+import 'swiper/css';
 import "swiper/css/effect-fade";
 
 import { heroSlides } from "../hooks/HeroSection";
 
+interface Slide {
+  id: number;
+  image: string;
+  mobileImage?: string;
+  mainText: string;
+  subText: string;
+}
+
 interface HeroSectionProps {
-  children?: React.ReactNode;
   className?: string;
 }
 
-
-
-
-const HeroSection: React.FC<HeroSectionProps> = ({ children, className = '' }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
   const [showFooter, setShowFooter] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY) {
-        setShowFooter(false);
-      }
-      if (currentScrollY === 0) {
-        // 스크롤이 완전히 맨 위일 때만 표시
-        setShowFooter(true);
-      }
-  
-    
-  
-      lastScrollY = currentScrollY;
+      setShowFooter(currentScrollY === 0); // 맨 위일 때만 푸터 보이기
     };
-  
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // sm 기준
+    };
+
+    // 초기 상태 설정
+    handleResize();
+    handleScroll();
+
+    window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
 
@@ -56,12 +61,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({ children, className = '' }) =
         loop={true}       
         className="w-full h-full scaleani"
       >
-          {heroSlides.map((slide) => (
+          {heroSlides.map((slide: Slide) => (
           <SwiperSlide key={slide.id}>
-            <div
+           <div
               className="w-full h-screen bg-cover bg-center transition-transform duration-[5000ms] scale-100 animate-zoom"
-              style={{ backgroundImage: `url(${slide.image})` }}
+              style={{
+                backgroundImage: `url(${isMobile && slide.mobileImage ? slide.mobileImage : slide.image})`,
+              }}
             >
+            
+              
               <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-white text-center px-4">
                 <h1 className="text-[48px] md:text-[150px] font-[800] font-bold mb-4 ">{slide.mainText}</h1> {/*가운데 글씨*/}
                 <p className="md:text-[40px] font-[300]">{slide.subText}</p> {/*가운데 글씨 두번째*/}
@@ -71,8 +80,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ children, className = '' }) =
  
           </SwiperSlide>
         ))}
+         
            {/* 화면 가운데 마우스 이모티콘 */}
-           <div className="absolute bottom-36 md:bottom-28 inset-x-0 mx-auto flex flex-col items-center gap-2 z-20 animate-float">
+           <div className="hidden absolute lg:bottom-28 inset-x-0 mx-auto flex flex-col items-center gap-2 z-20 animate-float">
           <div className="w-[86.4px] h-[86.4px] flex justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="56" height="79" viewBox="0 0 56 79" fill="none">
             <path d="M2.80078 28.7439C2.80078 22.0605 5.45577 15.6508 10.1817 10.9249C14.9076 6.19894 21.3173 3.54395 28.0008 3.54395C34.6842 3.54395 41.094 6.19894 45.8199 10.9249C50.5458 15.6508 53.2008 22.0605 53.2008 28.7439V50.3439C53.2008 53.6533 52.549 56.9302 51.2825 59.9876C50.0161 63.045 48.1599 65.823 45.8199 68.163C43.4798 70.5031 40.7018 72.3593 37.6444 73.6257C34.587 74.8921 31.3101 75.5439 28.0008 75.5439C24.6915 75.5439 21.4146 74.8921 18.3572 73.6257C15.2998 72.3593 12.5217 70.5031 10.1817 68.163C7.84165 65.823 5.98544 63.045 4.71902 59.9876C3.4526 56.9302 2.80078 53.6533 2.80078 50.3439V28.7439Z" stroke="white" stroke-width="5.4"/>
@@ -91,8 +101,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ children, className = '' }) =
 
    
         {/* 모바일부분 */}
-          <div className="absolute inset-0 bg-cover bg-center sm:hidden" style={{ backgroundImage: "url('https://pawfectwave.vercel.app/img/mobile/mobilemail/mobilemail100.jpg')", zIndex: -1, }}  />
-      {children}
+          <div className="absolute inset-0 bg-cover bg-center sm:hidden" />
+      {}
 
 
     
