@@ -49,7 +49,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
 
   return (
     <section
-      className={`hero-section  bg-cover bg-center min-h-screen z-0 ${className}`}>
+      className={`hero-section  bg-cover bg-center min-h-screen z-0 md:mb-[80px] ${className}`}>
         
          <Swiper
         modules={[Autoplay, EffectFade]}
@@ -82,7 +82,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
         ))}
          
            {/* 화면 가운데 마우스 이모티콘 */}
-           <div className="hidden absolute lg:bottom-28 inset-x-0 mx-auto flex flex-col items-center gap-2 z-20 animate-float">
+           <div className="hidden lg:flex absolute lg:bottom-28 inset-x-0 mx-auto flex-col items-center gap-2 z-20 animate-float">
           <div className="w-[86.4px] h-[86.4px] flex justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="56" height="79" viewBox="0 0 56 79" fill="none">
             <path d="M2.80078 28.7439C2.80078 22.0605 5.45577 15.6508 10.1817 10.9249C14.9076 6.19894 21.3173 3.54395 28.0008 3.54395C34.6842 3.54395 41.094 6.19894 45.8199 10.9249C50.5458 15.6508 53.2008 22.0605 53.2008 28.7439V50.3439C53.2008 53.6533 52.549 56.9302 51.2825 59.9876C50.0161 63.045 48.1599 65.823 45.8199 68.163C43.4798 70.5031 40.7018 72.3593 37.6444 73.6257C34.587 74.8921 31.3101 75.5439 28.0008 75.5439C24.6915 75.5439 21.4146 74.8921 18.3572 73.6257C15.2998 72.3593 12.5217 70.5031 10.1817 68.163C7.84165 65.823 5.98544 63.045 4.71902 59.9876C3.4526 56.9302 2.80078 53.6533 2.80078 50.3439V28.7439Z" stroke="white" stroke-width="5.4"/>
@@ -101,7 +101,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
 
    
         {/* 모바일부분 */}
-          <div className="absolute inset-0 bg-cover bg-center sm:hidden" />
+          <div className="md:absolute inset-0 bg-cover bg-center sm:hidden" />
       {}
 
 
@@ -197,8 +197,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
         <div className="text-sm leading-tight mr-2">
           <label className="block flex ">
             <input type="checkbox" className="peer hidden" />
-            <span className=" mr-2 w-4 h-4 border border-black flex items-center justify-center peer-checked:after:content-['✔'] peer-checked:after:text-black peer-checked:after:text-sm"></span>
-            개인정보 취급방침에 동의합니다.(필수) <button className='px-1 text-ftcolor text-sm rounded-full bg-fttextcolor '>보기</button>
+            <span className=" mr-2 w-4 h-4 border border-black flex items-center justify-center peer-checked:after:content-['✔'] peer-checked:after:text-black peer-checked:after:text-sm "></span>
+            개인정보 취급방침에 동의합니다.(필수) <button className='px-1 text-ftcolor text-sm rounded-full bg-fttextcolor ml-2'>보기</button>
           </label>
           <label className="block flex">
           <input type="checkbox" className="peer hidden" />

@@ -19,7 +19,7 @@
 @tailwind utilities;
 
 body{
-  background-color: transparent;
+  background-color: #F7F7F5;
   font-family: 'Paperlogy';
   font-weight: 300;
 }

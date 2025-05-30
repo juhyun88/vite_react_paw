@@ -2,9 +2,9 @@
 
 function QustionSection() {
     return (
-           <div className="bg-white text-gray-800">
+           <div className="hidden md:inline text-gray-800">
       {/* 검색 영역 */}
-      <section className="py-16 bg-[url('/your-background-image.jpg')] bg-cover bg-center text-center ">
+      <section className="py-16 bg-[url('https://pawfectwave.vercel.app/img/banner/banner200.jpg')] bg-cover bg-center text-center ">
         <h2 className="text-[#3A3A3A] text-[60px] font-bold mb-6 mb-[122px]">무엇이 궁금하신가요?</h2>
         <div className="max-w-[1396px] flex items-center justify-center flex-col mx-auto px-4">
           <div className="flex items-center  border-[4px] border-[#1E3932] rounded-full px-4 h-[70px] w-[1396px] bg-white shadow-md mb-[70px]">
