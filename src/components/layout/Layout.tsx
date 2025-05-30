@@ -16,7 +16,7 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({ children, menuArr, mclassName, cclassName  }) => {
   return (
-    <div className={`relative flex flex-col min-h-screen  ${mclassName}`}> 
+    <div className={`relative flex flex-col min-h-screen ${mclassName}`}> 
       <Hd menuArr={menuArr} />
       
       <div className={cclassName} >

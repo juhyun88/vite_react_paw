@@ -5,40 +5,66 @@ import footerlink from '../../db/ft.json';
 const Footer: React.FC = () => {
   return (
     <footer id="footer" className="bg-ftcolor text-white text-sm">
-    <div className="max-w-screen-xl mx-auto px-4 py-10 flex flex-col gap-6">
+    <div className="max-w-screen-xl mx-auto px-4 md:py-10 flex flex-col gap-6 pb-[40px]">
   
-       {/* 대표전화 + SNS 아이콘 묶음 */}
-    <div className="flex flex-col lg:flex-row lg:items-start">
-      
-      {/* 대표전화 영역 */}
-      <div className="w-full lg:w-auto text-center lg:text-left">
-        <h2 className="text-2xl font-bold text-fttextcolor">대표전화 1688-1688</h2>
-        <p className="mt-1 text-mint">연중무휴 24시간 상담 가능</p>
-      </div>
-</div>
-      {/* SNS 영역 - 오른쪽 정렬 */}
-      <div className="xl:absolute w-[170px] h-[200px] flex right-[70px]">
-        <div className="flex flex-row lg:flex-col items-center gap-[40px]">
-          {footerlink.snslink.map((v, i) => (
-            <Link key={i} to={v.to} className={v.className}>
-              <img src={v.imgSrc} alt={v.alt} className="w-6 h-6" />
-            </Link>
+          {/* ✅ PC 전용: 대표전화 영역 */}
+          <div className="hidden lg:block w-full relative">
+
+            {/* 대표전화 */}
+            <div className="text-left">
+              <h2 className="text-2xl font-bold text-fttextcolor">대표전화 1688-1688</h2>
+              <p className="mt-1 text-mint">연중무휴 24시간 상담 가능</p>
+            </div>
+
+            {/* SNS - 우측 하단 고정 */}
+            <div className="absolute right-0 bottom-0 top-0 w-[170px] h-[200px] flex justify-end">
+              <div className="flex flex-col items-center gap-[40px]">
+                {footerlink.snslink.map((v, i) => (
+                  <Link key={i} to={v.to} className={v.className}>
+                    <img src={v.imgSrc} alt={v.alt} className="w-6 h-6" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+
+          {/* ✅ 모바일 전용 영역 */}
+          <div className="flex flex-col-reverse lg:hidden items-center text-center mt-4">
+
+          {/* 대표전화 영역 */}
+          <div className="mt-4">
+            <h2 className="text-2xl font-bold text-fttextcolor">대표전화 1688-1688</h2>
+            <p className="mt-1 text-mint">연중무휴 24시간 상담 가능</p>
+          </div>
+
+          {/* 모바일용 링크 목록 */}
+          <div className="flex flex-wrap justify-center gap-2 text-fttextcolor tracking-tighter mt-4">
+            {footerlink.fnavi.map((v, i) => (
+              <React.Fragment key={i}>
+                {i !== 0 && <span className="mx-[-4px]">|</span>}
+                <Link to={v.to} className="hover:underline">
+                  {v.text}
+                </Link>
+              </React.Fragment>
             ))}
           </div>
-        </div>
-        
+
+          {/* SNS 영역 */}
+          <div className="mt-4">
+            <div className="flex flex-row items-center gap-[40px] justify-center">
+              {footerlink.snslink.map((v, i) => (
+                <Link key={i} to={v.to} className={v.className}>
+                  <img src={v.imgSrc} alt={v.alt} className="w-6 h-6" />
+                </Link>
+              ))}
+            </div>
+          </div>
+          </div>
+
+
  
-        {/* 모바일용 링크 목록 */}
-        <div className="lg:hidden flex flex-wrap justify-center gap-2 text-fttextcolor">
-          {footerlink.fnavi.map((v, i) => (
-            <React.Fragment key={i}>
-              {i !== 0 && <span>|</span>}
-              <Link to={v.to} className="hover:underline">
-                {v.text}
-              </Link>
-            </React.Fragment>
-          ))}
-        </div>
+     
 
         {/* 회사 정보 및 이메일 */}
         <div className="text-start lg:text-left text-fttextcolor text-sm leading-relaxed">
