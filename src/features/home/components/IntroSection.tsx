@@ -3,7 +3,7 @@ import React from "react";
 function IntroSection() {
   return (
     <div className="py-20 overflow-hidden bg-[#F7F7F5]">
-  <div className="md:w-[1394px] px-[37.5px] mx-auto grid md:grid-cols-2 grid-rows-3 gap-16 px-4" id="ehwave_love">
+  <div className="md:w-[1280px] px-[37.5px] mx-auto grid md:grid-cols-2 grid-rows-3 gap-16 px-4" id="ehwave_love">
 
     {/* 사랑 - 이미지 */}
     <div className="relative w-full flex justify-center items-center">
@@ -23,12 +23,12 @@ function IntroSection() {
           {/* 사랑 - 텍스트 */}
             <div className="hidden md:flex items-center justify-center text-center md:text-left">
             <p className="text-[20px] md:text-[24px] leading-relaxed text-center leading-tight">
-                <span className="hidden md:inline font-bold text-[#754C43] text-[45px] font-[400]">사랑</span>
-                <span className="hidden md:inline text-[45px] font-[400]">은 가족의 일원으로서 사랑과 보살핌을 받으며 소중한 시간을 <br />함께한 존재로써</span>
+                <span className="hidden md:inline font-bold text-[#754C43] text-[42px] font-[400]">사랑</span>
+                <span className="hidden md:inline text-[42px] font-[400]">은 가족의 일원으로서 사랑과 보살핌을 받으며 소중한 시간을 <br />함께한 존재로써</span>
                 <span className="hidden md:inline text-[#754C43] text-[45px] font-[400]"> 사랑의 마음</span>
-                <span className="hidden md:inline text-[45px] font-[400]">으로 <br /></span>
+                <span className="hidden md:inline text-[42px] font-[400]">으로 <br /></span>
                 <span className="hidden md:inline text-[#754C43] text-[45px] font-[400]">서로 메세지</span>
-                <span className="hidden md:inline text-[45px] font-[400]">를 나누는 시간과<br /> 되새기는 시간을 의미합니다.</span>
+                <span className="hidden md:inline text-[42px] font-[400]">를 나누는 시간과<br /> 되새기는 시간을 의미합니다.</span>
             </p>
             </div>
 

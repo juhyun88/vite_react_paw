@@ -6,6 +6,7 @@ import InfoHighlightSection from './components/InfoHighlightSection'
 import SnsSection from './components/SnsSection'
 import CampaignSection from './components/CampaignSection'
 import QustionSection from './components/QustionSection'  
+import Lolling from "./components/Lolling"; 
 
 type HomeProps = {
   className?: string;
@@ -20,6 +21,7 @@ const Home: React.FC<HomeProps> = ({className }) => {
       <QustionSection />
       <SnsSection />
       <CampaignSection />
+      <Lolling />
     </div>
   )
 }

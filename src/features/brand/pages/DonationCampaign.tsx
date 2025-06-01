@@ -8,7 +8,7 @@ interface Post {
   body: string;
 }
 
-const Home: React.FC = () => {
+const DonationCampaign: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
@@ -105,4 +105,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default DonationCampaign;

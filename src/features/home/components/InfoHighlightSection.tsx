@@ -1,9 +1,9 @@
 function InfoHighlightSection() {
   return (
-    <section className="w-full max-w-[1394px] mx-auto bg-[#F7F7F5]">
+    <section className="w-full max-w-[1280px] mx-auto bg-[#F7F7F5]">
     <div className=" container px-[37.5px] md:px-[80px] md:py-[80px] pb-[50px] space-y-10 " id="sy_imagead">
       {/* 타이틀 영역 */}
-      <div className="flex flex-col md:flex-row justify-between items-end gap-6">
+      <div className="flex flex-col md:flex-row justify-between md:items-end gap-6">
         <div className="font-bold leading-snug font-[#1E1E1E] md:text-[60px] text-[30px] text-center md:text-start">
           사라지지 않는 사랑, <br />
           기억은 영원히 남습니다.

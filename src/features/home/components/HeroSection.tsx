@@ -22,6 +22,16 @@ interface HeroSectionProps {
 const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
   const [showFooter, setShowFooter] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+     // 예약하기 누르면 나오는 모달
+    const openKakaoChat = () => {
+      window.open("https://pf.kakao.com/_YOUR_CHANNEL_ID/chat", "_blank");
+    };
+
+    const callPhone = () => {
+      window.location.href = "tel:010-1234-5678";
+    };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,6 +42,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768); // sm 기준
     };
+
+ 
+
+
 
     // 초기 상태 설정
     handleResize();
@@ -82,15 +96,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
         ))}
          
            {/* 화면 가운데 마우스 이모티콘 */}
-           <div className="hidden lg:flex absolute lg:bottom-28 inset-x-0 mx-auto flex-col items-center gap-2 z-20 animate-float">
-          <div className="w-[86.4px] h-[86.4px] flex justify-center items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="79" viewBox="0 0 56 79" fill="none">
+           <div className="hidden lg:flex absolute lg:bottom-32 inset-x-0 mx-auto flex-col items-center gap-2 z-20 animate-float">
+          <div className="w-[86.4px] h-[50px] flex justify-center items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 56 79" fill="none">
             <path d="M2.80078 28.7439C2.80078 22.0605 5.45577 15.6508 10.1817 10.9249C14.9076 6.19894 21.3173 3.54395 28.0008 3.54395C34.6842 3.54395 41.094 6.19894 45.8199 10.9249C50.5458 15.6508 53.2008 22.0605 53.2008 28.7439V50.3439C53.2008 53.6533 52.549 56.9302 51.2825 59.9876C50.0161 63.045 48.1599 65.823 45.8199 68.163C43.4798 70.5031 40.7018 72.3593 37.6444 73.6257C34.587 74.8921 31.3101 75.5439 28.0008 75.5439C24.6915 75.5439 21.4146 74.8921 18.3572 73.6257C15.2998 72.3593 12.5217 70.5031 10.1817 68.163C7.84165 65.823 5.98544 63.045 4.71902 59.9876C3.4526 56.9302 2.80078 53.6533 2.80078 50.3439V28.7439Z" stroke="white" stroke-width="5.4"/>
             <path d="M28 14.3438V25.1438" stroke="white" stroke-width="5.4" stroke-linecap="round"/>
           </svg>
           </div>
             <div className='w-12 flex justify-center'>
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="51" viewBox="0 0 50 51" fill="none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 51" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M9.31421 14.2361C9.44707 14.081 9.60918 13.9537 9.79127 13.8614C9.97337 13.769 10.1719 13.7135 10.3754 13.6979C10.579 13.6823 10.7837 13.707 10.9777 13.7705C11.1717 13.8341 11.3513 13.9352 11.5062 14.0682L24.9982 25.6313L38.4901 14.0682C38.8047 13.8157 39.2051 13.6954 39.6067 13.7328C40.0084 13.7702 40.3797 13.9622 40.6423 14.2684C40.9049 14.5746 41.0382 14.9709 41.0139 15.3735C40.9896 15.7762 40.8097 16.1536 40.5123 16.426L26.0092 28.8572C25.7276 29.0985 25.369 29.2311 24.9982 29.2311C24.6273 29.2311 24.2687 29.0985 23.9871 28.8572L9.4841 16.426C9.17163 16.1577 8.97844 15.7764 8.94697 15.3658C8.91551 14.9551 9.04834 14.5488 9.31628 14.2361M9.31628 22.5235C9.44914 22.3685 9.61125 22.2411 9.79334 22.1488C9.97544 22.0565 10.1739 22.0009 10.3775 21.9853C10.5811 21.9697 10.7857 21.9944 10.9798 22.058C11.1738 22.1215 11.3534 22.2227 11.5083 22.3557L24.9982 33.9187L38.4901 22.3557C38.6448 22.2213 38.8246 22.1188 39.0191 22.0542C39.2136 21.9895 39.4189 21.964 39.6233 21.9791C39.8277 21.9941 40.0271 22.0494 40.21 22.1419C40.3929 22.2343 40.5558 22.362 40.6891 22.5177C40.8225 22.6733 40.9237 22.8538 40.987 23.0487C41.0504 23.2436 41.0745 23.4491 41.0581 23.6534C41.0416 23.8577 40.9849 24.0567 40.8913 24.239C40.7976 24.4213 40.6688 24.5832 40.5123 24.7155L26.0092 37.1467C25.7276 37.388 25.369 37.5206 24.9982 37.5206C24.6273 37.5206 24.2687 37.388 23.9871 37.1467L9.4841 24.7155C9.32908 24.5826 9.20176 24.4205 9.10942 24.2384C9.01708 24.0564 8.96153 23.8578 8.94594 23.6543C8.93036 23.4507 8.95504 23.2461 9.01858 23.052C9.08213 22.858 9.18329 22.6784 9.31628 22.5235Z" fill="white"/>
             </svg>
           </div>
@@ -107,7 +121,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
 
     
             {/* 모바일 전용 하단 메뉴 */}
-        <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50">
+        <div className={`md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50 transition-transform duration-500 ${
+        showFooter ? "translate-y-0" : "translate-y-full"}`}
+    >
           {/* 상단 버튼 영역 */}
           <div className="flex">
             <a href="/memorial" className="flex-1 text-center py-3 bg-[#A5C1A0] text-white hover:opacity-90">
@@ -208,9 +224,114 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
         </div>
 
         {/* 온라인예약 버튼 */}
-        <button className="bg-mainbutton text-white w-[196px] h-[70px] p-[10px] rounded-full font-[500] text-[20px]">
+        <div>
+        <button
+          className="bg-mainbutton text-white w-[196px] h-[70px] p-[10px] rounded-full font-medium text-[20px]"
+          onClick={() => setShowModal(true)}
+        >
           온라인예약
         </button>
+
+         {showModal && (
+      <div
+        className="fixed inset-0 z-50 bg-black/40 flex justify-end items-end p-10"
+        onClick={() => setShowModal(false)}
+      >
+        <div
+          className="bg-white rounded-3xl w-full max-w-md px-6 pt-6 pb-10 shadow-lg animate-slide-up z-90"
+          onClick={(e) => e.stopPropagation()}
+     > 
+        {/* X 버튼 (모달 닫기) */}
+          <button 
+            className="absolute right-14 bg-gray-300 rounded-full w-6 h-6 flex items-center justify-center text-gray-700"
+           onClick={(e) => {e.stopPropagation();  // 버튼 클릭 시 부모 div 클릭 이벤트 안 타게 하기
+      setShowModal(false);
+    }}
+          >
+            ✖
+          </button>
+
+
+
+      {/* 이미지 (✅ 예제 이미지 추가) */}
+      <div className="relative">
+        <img
+          src="https://via.placeholder.com/300" // ✅ 예제 이미지 URL 추가
+          alt="반려동물과 보호자"
+          className="rounded-xl w-full h-48 object-cover"
+        />
+        <button className="absolute bottom-2 right-4 bg-white/80 text-xs px-3 py-1 rounded-full">
+          운영시간 보기 →
+        </button>
+      </div>
+ 
+      {/* 텍스트 */}
+      <div className="mt-5 text-center">
+        <p className="font-medium text-gray-800 text-sm leading-relaxed">
+          파우펙트트웨이브 반려동물 장례식장<br />
+          보호자님, 무엇을 도와드릴까요?
+        </p>
+
+        {/* 문의하기 */}
+        <button className="mt-4 bg-[#8D6544] text-white w-full py-3 rounded-full flex justify-center items-center gap-2">
+          문의하기
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </button>
+        <p className="text-xs text-gray-500 mt-1">몇 분 내 답변을 받으실 수 있어요</p>
+
+            {/* 다른 방법으로 문의 */}
+            <div className="mt-6">
+              <p className="text-sm text-gray-600 mb-2">다른 방법으로 문의</p>
+              <div className="flex justify-center gap-4">
+                <button onClick={openKakaoChat} className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
+                  💬
+                </button>
+                <button onClick={callPhone} className="w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center">
+                  📞
+                </button>
+              </div>
+            </div>
+      </div>
+
+            {/* ✅ Bottom Tab Navigation을 모달 내부로 이동 */}
+            <nav className="w-full h-16 border-t flex justify-around items-center text-sm text-gray-600 mt-4">
+              {/* 홈 버튼 */}
+              <button 
+                className="flex flex-col items-center focus:outline-none"
+                onClick={() => window.location.href = "/"}
+              >
+                <span>🏠</span>
+                <span>홈</span>
+              </button>
+
+              {/* 대화 버튼 */}
+              <button 
+                className="flex flex-col items-center focus:outline-none"
+                onClick={() => window.open("https://chat.example.com", "_blank")}
+              >
+                <span>💬</span>
+                <span>대화</span>
+              </button>
+
+              {/* 설정 버튼 */}
+              <button 
+                className="flex flex-col items-center focus:outline-none"
+                onClick={() => window.location.href = "/settings"}
+              >
+                <span>⚙️</span>
+                <span>설정</span>
+              </button>
+            </nav>
+
+    </div>
+  </div>
+
+
+            )}
+
+          </div>
       </div>
     </section>
   );
