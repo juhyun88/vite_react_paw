@@ -68,13 +68,23 @@ export default {
           '60%': { transform: 'scale(0.95)' },
           '100%': { transform: 'scale(1)' },
         },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      'slide-up': {
+        '0%': { transform: 'translateY(100%)' },
+        '100%': { transform: 'translateY(0%)' },
+      },
       },
       animation: {
         float: 'float 3s ease-in-out infinite',
         rotate45: 'rotate45 2s ease-in-out infinite',
         rotate40: 'rotate40 1s ease-in-out infinite',
-         pulseScale: 'pulseScale 1.5s ease-in-out infinite',
-         pop: 'pop 0.6s ease-in-out infinite',
+        pulseScale: 'pulseScale 1.5s ease-in-out infinite',
+        pop: 'pop 0.6s ease-in-out infinite',
+        marquee: 'marquee 30s linear infinite',
+        'slide-up': 'slide-up 0.3s ease-out'
       },      
     },
   },

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Home from "./features/home/Home";
+import Brand from "./features/brand/Brand";
 import SubRouter from './routes/SubRouter';
 
 
@@ -31,6 +32,7 @@ function App({ mclassName, cclassName }: { mclassName: string; cclassName: strin
     <Layout mclassName={mclassName} cclassName={cclassName} menuArr={ menus }>
      <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/" element={<Brand />} />
         {menus
           .filter(menu => String(menu.code).length === 6 && menu.path) // 6자리이며 path가 있는 경우만
           .map(menu => (

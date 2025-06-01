@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 
 import CI  from '../ui/CI';
 import Logotext  from '../ui/Logotext';
@@ -26,12 +27,23 @@ const Header: React.FC<HeaderProps> = ({ menuArr }) => {
       [key]: !prev[key],
     }));
   };
+  
+  const [scrolled, setScrolled] = useState(false);
 
+  useEffect(() => {
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 700);
+  };
+
+    window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
   
 
     return (
-        <header className="px-[15px] md:px-[30px] xl:px-[50px] z-20 fixed left-0 right-0 top-0">
-            <div className="flex justify-between items-center  pt-[26px]">
+        <header className={`px-[15px] md:px-[30px] xl:px-[50px] z-20 fixed left-0 right-0 top-0"transition-colors duration-500 ${scrolled ? 'bg-[rgba(31,38,37,0.9)]' : ''}`}>
+            <div className="flex justify-between items-center pt-[26px] ">
+
                 <h1 className="mb-0 flex flex-col justify-center z-20 xl:h-[55px] h-[40px]">
                     <a href="/" className="logo_container flex items-center gap-2 text-white h-full">   
                      
