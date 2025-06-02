@@ -35,26 +35,28 @@ export const insertData = async <T extends TableName>(table: T, payload: Insert<
   return data;
 };
 
-// // UPDATE
-// export const updateData = async <T extends TableName>(
-//   table: T,
-//   idField: keyof Row<T>,
-//   idValue: any,
-//   payload: Update<T>
-// ) => {
-//   const { data, error } = await supabase
-//     .from(table)
-//     .update(payload)
-//     .eq(idField as string, idValue)
-//     .select();
 
-//   if (error) {
-//     console.error(`Error updating ${table}:`, error.message);
-//     return null;
-//   }
+export const updateData = async <T extends TableName>(
+  table: T,
+  idField: keyof Row<T>,
+  idValue: Row<T>[typeof idField],
+  payload: Partial<Row<T>>      // 이 부분 수정
+): Promise<Row<T>[] | null> => {
+  const { data, error } = await supabase
+    .from(table)
+    .update(payload)
+    .eq(idField as string, idValue)
+    .select();
 
-//   return data;
-// };
+  if (error) {
+    console.error(`❌ ${table} 테이블 업데이트 실패:`, error.message);
+    return null;
+  }
+
+  return data;
+};
+
+
 
 // // DELETE
 // export const deleteData = async <T extends TableName>(
