@@ -1,27 +1,27 @@
 import React from "react";
-
-import BrandIntro from './pages/BrandIntro'
-import DonationCampaign from './pages/DonationCampaign'
+import BrandIntro from './pages/BrandIntro';
+import DonationCampaign from './pages/DonationCampaign';
 
 type BrandProps = {
-  className?: string; 
-  componentNm : string;
+  className?: string;
+  componentNm: string; // 라우터 값으로 
 };
 
+const COMPONENT_MAP = {
+  brandstory: BrandIntro as React.FC<{ className?: string }>,
+  campain: DonationCampaign as React.FC<{ className?: string }>,
+};
+
+
 const Brand: React.FC<BrandProps> = ({ className = "", componentNm }) => {
-  const safeComponentClass = componentNm.replace(/\//g, ""); // 슬래시 제거
+
+  const Component = COMPONENT_MAP[componentNm as keyof typeof COMPONENT_MAP] || null;
 
   return (
-    <div className={`relative flex flex-col ${className} `}>
-
-      {
-        componentNm === "/brendstory" ?  
-          <BrandIntro className={safeComponentClass } />
-        :
-          <DonationCampaign className={safeComponentClass} />
-      }
+    <div className={`relative flex flex-col ${className}`}>
+      {Component && <Component className="" />}
     </div>
   );
 };
 
-export default Brand
+export default Brand;

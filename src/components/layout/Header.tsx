@@ -41,8 +41,8 @@ const Header: React.FC<HeaderProps> = ({ menuArr }) => {
   
 
     return (
-        <header className={`px-[15px] md:px-[30px] xl:px-[50px] z-20 fixed left-0 right-0 top-0"transition-colors duration-500 ${scrolled ? 'bg-[rgba(31,38,37,0.9)]' : ''}`}>
-            <div className="flex justify-between items-center pt-[26px] ">
+        <header className={`px-[15px] md:px-[30px] xl:px-[50px] z-20 fixed left-0 right-0 top-0 transition-colors duration-500 ${scrolled ? 'bg-[rgba(31,38,37,0.9)]' : ''}`}>
+            <div className={`flex justify-between items-center   ${scrolled ? '' : 'pt-[26px]' }`}>
 
                 <h1 className="mb-0 flex flex-col justify-center z-20 xl:h-[55px] h-[40px]">
                     <a href="/" className="logo_container flex items-center gap-2 text-white h-full">   
@@ -100,7 +100,7 @@ const Header: React.FC<HeaderProps> = ({ menuArr }) => {
                                 <li key={d1menu.code} className="py-3">
                                   <div className="flex items-center">
                                     <Link
-                                      to={d1menu.path ?? "#none"}
+                                      to={`/${d1menu.path ?? "#none"}`}
                                       className="font-semibold text-lg text-gray-800 pl-4"
                                       onClick={() => {
                                         if (subMenus.length > 0) {
@@ -130,7 +130,7 @@ const Header: React.FC<HeaderProps> = ({ menuArr }) => {
                                       {subMenus.map((submenu) => (
                                         <li key={submenu.code} className="py-1">
                                           <Link
-                                            to={submenu.path ?? "#none"}
+                                            to={`/${submenu.path ?? "#none"}`}
                                             className="text-sm text-gray-600 hover:text-gray-800"
                                             onClick={() => setIsMenuOpen(false)}
                                           >
