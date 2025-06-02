@@ -7,10 +7,15 @@ import NormalFuneral from "../features/funeral/pages/NormalFuneral";
 import StoneFuneral from "../features/funeral/pages/StoneFuneral";
 import BranchIntro from "../features/branch/pages/BranchIntro";
 import Location from "../features/branch/pages/Location";
-import Boneservice from "../features/services/pages/Noncompaniedservice";
+import Noncompaniedservice from "../features/services/pages/Noncompaniedservice";
 import Cybermemorial from "../features/services/pages/Cybermemorial";
 import Funeralservice from "../features/services/pages/Funeralservice";
-import Noncompaniedservice from "../features/services/pages/Boneservice";
+import Boneservice from "../features/services/pages/Boneservice";
+import Hospital from "../features/support/components/Hospital";
+import Insurance from "../features/support/components/Insurance";
+import Petroscare from "../features/support/components/Petroscare";
+import Question from "../features/support/components/Question";
+import Inquire from "../features/support/components/Inquire";
 
 //import Funeral from "../features/funeral/Funeral"; // ✅ Funeral 추가
 
@@ -27,6 +32,12 @@ export type ValidComponentPath =
   | "cybermemorial"
   | "funeralservice"
   | "noncompaniedservice"
+  | "hospital"
+  | "insurance"
+  | "petlose"
+  | "question"
+  | "inquire"
+  
 
 type ComponentProps = {
     className: string;
@@ -48,7 +59,11 @@ const COMPONENT_MAP: Record<
   cybermemorial: Cybermemorial,
   funeralservice: Funeralservice,
   noncompaniedservice: Noncompaniedservice,
-  
+  hospital: Hospital,
+  insurance: Insurance,
+  petlose: Petroscare,
+  question: Question,  
+  inquire: Inquire,
 };
  
 

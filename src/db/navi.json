@@ -10,8 +10,8 @@
       "title": "장례서비스",
       "links": [
         { "name": "장례절차", "path": "/procedures" },
-        { "name": "일반장례 비용", "path": "/price" },
-        { "name": "스톤 장례 비용", "path": "/stoneprice" }
+        { "name": "일반장례", "path": "/price" },
+        { "name": "스톤장례", "path": "/stoneprice" }
       ]
     },
     {
@@ -25,18 +25,19 @@
       "title": "부가서비스",
       "links": [
         { "name": "운구서비스", "path": "/service" },
-        { "name": "비동행 장례서비스", "path": "/service" },
-        { "name": "봉안당(산골)", "path": "/service" },
+        { "name": "비동행 장례", "path": "/service" },
+        { "name": "임시안치.산골", "path": "/service" },
         { "name": "사이버추모관", "path": "/cybermemorial" }
       ]
     },
     {
       "title": "고객지원센터",
       "links": [
-        { "name": "펫&로스케어", "path": "/petlose" },
-        { "name": "펫&보험", "path": "/insurance" },
-        { "name": "펫&협력병원", "path": "/hospital" },
-        { "name": "Q&A", "path": "/question" }
+        { "name": "펫로스 케어", "path": "/petlose" },
+        { "name": "보험", "path": "/insurance" },
+        { "name": "파우펙트&펫 협력병원", "path": "/hospital" },
+        { "name": "자주묻는질문", "path": "/question" },
+        { "name": "문의하기", "path": "/inquire" }
       ]
     }
   ]

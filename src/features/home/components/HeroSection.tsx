@@ -231,108 +231,187 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
         >
           온라인예약
         </button>
+        {showModal && (
+                <div
+                  className="fixed inset-0 z-[9999] bg-black/40 flex justify-end items-end p-10"
+                  onClick={() => setShowModal(false)}
+                >
+                  <div
+                    className="bg-white rounded-3xl w-full max-w-md px-6 shadow-lg animate-slide-up z-90"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {/* X 버튼 (모달 닫기) */}
+                    <button
+                      className="absolute right-14 bg-gray-300 rounded-full w-6 h-6 flex items-center justify-center text-gray-700"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setShowModal(false);
+                      }}
+                    >
+                      ✖
+                    </button>
 
-         {showModal && (
-      <div
-        className="fixed inset-0 z-50 bg-black/40 flex justify-end items-end p-10"
-        onClick={() => setShowModal(false)}
-      >
-        <div
-          className="bg-white rounded-3xl w-full max-w-md px-6 pt-6 pb-10 shadow-lg animate-slide-up z-90"
-          onClick={(e) => e.stopPropagation()}
-     > 
-        {/* X 버튼 (모달 닫기) */}
-          <button 
-            className="absolute right-14 bg-gray-300 rounded-full w-6 h-6 flex items-center justify-center text-gray-700"
-           onClick={(e) => {e.stopPropagation();  // 버튼 클릭 시 부모 div 클릭 이벤트 안 타게 하기
-      setShowModal(false);
-    }}
-          >
-            ✖
-          </button>
+                    {/* 이미지 */}
+                    <div className="relative">
+                      <img
+                        src="https://via.placeholder.com/300"
+                        alt="반려동물과 보호자"
+                        className="rounded-xl w-full h-48 object-cover"
+                      />
+                      <button className="absolute bottom-2 right-4 bg-white/80 text-xs px-3 py-1 rounded-full">
+                        운영시간 보기 →
+                      </button>
+                    </div>
 
+                    {/* 텍스트 */}
+                    <div className="mt-5 text-center">
+                      <p className="font-medium text-gray-800 text-sm leading-relaxed">
+                        파우펙트트웨이브 반려동물 장례식장
+                        <br />
+                        보호자님, 예약을 위해 아래 정보를 입력해주세요.
+                      </p>
+                    </div>
 
+                    {/* 온라인 예약 폼 */}
+                    <form
+                      className="mt-6 space-y-4"
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        // TODO: 폼 제출 처리 함수 호출
+                        alert('예약이 접수되었습니다!');
+                        setShowModal(false);
+                      }}
+                    >
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          보호자 이름
+                        </label>
+                        <input
+                          type="text"
+                          name="ownerName"
+                          required
+                          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#8D6544]"
+                          placeholder="이름을 입력하세요"
+                        />
+                      </div>
 
-      {/* 이미지 (✅ 예제 이미지 추가) */}
-      <div className="relative">
-        <img
-          src="https://via.placeholder.com/300" // ✅ 예제 이미지 URL 추가
-          alt="반려동물과 보호자"
-          className="rounded-xl w-full h-48 object-cover"
-        />
-        <button className="absolute bottom-2 right-4 bg-white/80 text-xs px-3 py-1 rounded-full">
-          운영시간 보기 →
-        </button>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          연락처
+                        </label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          required
+                          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#8D6544]"
+                          placeholder="010-1234-5678"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          예약 희망 날짜
+                        </label>
+                        <input
+                          type="date"
+                          name="reservationDate"
+                          required
+                          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#8D6544]"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          추가 요청 사항
+                        </label>
+                        <textarea
+                          name="notes"
+                          rows={3}
+                          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#8D6544]"
+                          placeholder="특별히 요청하실 내용이 있으면 작성해주세요 (선택)"
+                        />
+                      </div>
+
+                      <button
+                        type="submit"
+                        className="w-full bg-[#8D6544] text-white py-3 rounded-full flex justify-center items-center gap-2"
+                      >
+                        예약하기
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          className="w-5 h-5"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                          />
+                        </svg>
+                      </button>
+                    </form>
+
+                    {/* 다른 방법으로 문의 */}
+                    <div className="mt-6 text-center">
+                      <p className="text-sm text-gray-600 mb-2">다른 방법으로 문의</p>
+                      <div className="flex justify-center gap-4">
+                        <button
+                          onClick={openKakaoChat}
+                          className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center"
+                        >
+                          💬
+                        </button>
+                        <button
+                          onClick={callPhone}
+                          className="w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center"
+                        >
+                          📞
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Bottom Tab Navigation */}
+                    <nav className="w-full h-16 border-t flex justify-around items-center text-sm text-gray-600 mt-4">
+                      <button
+                        className="flex flex-col items-center focus:outline-none"
+                        onClick={() => (window.location.href = '/')}
+                      >
+                        <span>🏠</span>
+                        <span>홈</span>
+                      </button>
+                      <button
+                        className="flex flex-col items-center focus:outline-none"
+                        onClick={() => window.open('https://chat.example.com', '_blank')}
+                      >
+                        <span>💬</span>
+                        <span>대화</span>
+                      </button>
+                      <button
+                        className="flex flex-col items-center focus:outline-none"
+                        onClick={() => (window.location.href = '/settings')}
+                      >
+                        <span>⚙️</span>
+                        <span>설정</span>
+                      </button>
+                    </nav>
+                  </div>
+                </div>
+                
+            )}
       </div>
- 
-      {/* 텍스트 */}
-      <div className="mt-5 text-center">
-        <p className="font-medium text-gray-800 text-sm leading-relaxed">
-          파우펙트트웨이브 반려동물 장례식장<br />
-          보호자님, 무엇을 도와드릴까요?
-        </p>
-
-        {/* 문의하기 */}
-        <button className="mt-4 bg-[#8D6544] text-white w-full py-3 rounded-full flex justify-center items-center gap-2">
-          문의하기
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </button>
-        <p className="text-xs text-gray-500 mt-1">몇 분 내 답변을 받으실 수 있어요</p>
-
-            {/* 다른 방법으로 문의 */}
-            <div className="mt-6">
-              <p className="text-sm text-gray-600 mb-2">다른 방법으로 문의</p>
-              <div className="flex justify-center gap-4">
-                <button onClick={openKakaoChat} className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
-                  💬
-                </button>
-                <button onClick={callPhone} className="w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center">
-                  📞
-                </button>
-              </div>
-            </div>
-      </div>
-
-            {/* ✅ Bottom Tab Navigation을 모달 내부로 이동 */}
-            <nav className="w-full h-16 border-t flex justify-around items-center text-sm text-gray-600 mt-4">
-              {/* 홈 버튼 */}
-              <button 
-                className="flex flex-col items-center focus:outline-none"
-                onClick={() => window.location.href = "/"}
-              >
-                <span>🏠</span>
-                <span>홈</span>
-              </button>
-
-              {/* 대화 버튼 */}
-              <button 
-                className="flex flex-col items-center focus:outline-none"
-                onClick={() => window.open("https://chat.example.com", "_blank")}
-              >
-                <span>💬</span>
-                <span>대화</span>
-              </button>
-
-              {/* 설정 버튼 */}
-              <button 
-                className="flex flex-col items-center focus:outline-none"
-                onClick={() => window.location.href = "/settings"}
-              >
-                <span>⚙️</span>
-                <span>설정</span>
-              </button>
-            </nav>
 
     </div>
-  </div>
+
+  
 
 
-            )}
+      
 
-          </div>
-      </div>
+        
+   
     </section>
   );
 };
