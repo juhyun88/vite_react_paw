@@ -6,9 +6,13 @@ interface Post {
   id: number;
   title: string;
   body: string;
+ 
+}
+interface DonationCampaignProps {
+  className: string;
 }
 
-const DonationCampaign: React.FC = () => {
+const DonationCampaign: React.FC<DonationCampaignProps> = ({className}) => {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
@@ -19,16 +23,7 @@ const DonationCampaign: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative h-screen flex flex-col">
-      {/* 상단 Hero 영역 */}
-      <header
-        className="bg-cover bg-center h-[300px] text-white p-6"
-        style={{
-          backgroundImage: `url('https://pawfectwave.vercel.app/img/main/Main_background1.jpg')`,
-        }}
-      >
-        <h1 className="text-3xl font-bold">기본 홈페이지</h1>
-      </header>
+    <div className={`relative h-screen flex flex-col ${className}`}>
 
       {/* 스크롤 가능한 메인 콘텐츠 */}
       <main className="flex-1 overflow-y-auto bg-[#f0f4f5] px-4 py-6 space-y-12">
