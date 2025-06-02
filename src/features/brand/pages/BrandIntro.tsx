@@ -1,9 +1,9 @@
 import React from 'react';
 
-function BrandIntro() {
+function BrandIntro({className} : {className:string}) {
     return (
-        <div>
-            
+        <div className={className}>
+            브랜드 컨텐츠 넣어주세요.
         </div>
     );
 }
