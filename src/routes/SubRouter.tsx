@@ -1,34 +1,41 @@
 import React from "react";
 import { Menu } from "../types/common";
-import Brand from "../features/brand/Brand";
-import Funeral from "../features/funeral/Funeral"; // ✅ Funeral 추가
+import BrandIntro from "../features/brand/pages/BrandIntro";
+import DonationCampaign from "../features/brand/pages/DonationCampaign";
+import FuneralProcedure from "../features/funeral/pages/FuneralProcedure";
 
-// 타입 정의
-export type BrandComponentPath = "/campaign" | "/brandstory";
-export type FuneralComponentPath = "/procedures" | "/price" | "/stoneprice"; // ✅ Funeral 관련 경로 추가
+//import Funeral from "../features/funeral/Funeral"; // ✅ Funeral 추가
 
-export type ValidComponentPath = BrandComponentPath | FuneralComponentPath;
+//서브라우터들 수파베이스로 값을 연동하고 싶어
+export type ValidComponentPath =
+  | "campain"
+  | "brandstory"
+  | "procedures";
 
-// `ValidComponentPath`인지 확인하는 함수
-export const isValidComponentPath = (path: string): path is ValidComponentPath => {
-  return ["/campaign", "/brandstory", "/procedures", "/price", "/stoneprice"].includes(path);
+type ComponentProps = {
+    className: string;
 };
+  
 
-// ✅ Funeral 관련 타입 가드 함수 추가
-const isBrandComponentPath = (path: ValidComponentPath): path is BrandComponentPath => {
-  return ["/campaign", "/brandstory"].includes(path);
+const COMPONENT_MAP: Record<
+  ValidComponentPath,
+  React.FC<ComponentProps>
+> = {
+  campain: DonationCampaign,
+  brandstory: BrandIntro,
+  procedures: FuneralProcedure,
 };
-
-const isFuneralComponentPath = (path: ValidComponentPath): path is FuneralComponentPath => {
-  return ["/procedures", "/price", "/stoneprice"].includes(path);
-};
+ 
 
 type SubRouterProps = {
   menu: Menu;
   componentNm: ValidComponentPath;
 };
 
+
+
 const SubRouter: React.FC<SubRouterProps> = ({ menu, componentNm }) => {
+  const DynamicComponent = COMPONENT_MAP[componentNm];
   return (
     <section>
       <div
@@ -40,21 +47,21 @@ const SubRouter: React.FC<SubRouterProps> = ({ menu, componentNm }) => {
       >
         <div className="text-center">
           <h1 className="text-3xl font-bold mb-4">{menu.title}</h1>
-          <p className="mt-2 text-sm">
+          <p className="mt-2 text-sm"  >
             {menu.sub_title}
-            {componentNm}
+            <span >꼭 지워야해  {componentNm}</span>
+           
           </p>
         </div>
       </div>
 
       {/* ✅ Brand와 Funeral 컴포넌트를 올바르게 렌더링 */}
       <div>
-        {isBrandComponentPath(componentNm) && (
-          <Brand className="container mx-auto" componentNm={componentNm} />
-        )}
-        {isFuneralComponentPath(componentNm) && (
-          <Funeral className="container mx-auto" componentNm={componentNm} />
-        )}
+      {DynamicComponent ? (
+          <DynamicComponent className="" />
+        ) : (
+          <div className="text-center py-12 text-red-500">잘못된 컴포넌트 경로입니다.</div>
+        )}       
       </div>
     </section>
   );

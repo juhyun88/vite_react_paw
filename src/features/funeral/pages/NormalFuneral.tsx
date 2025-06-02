@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 function NormalFuneral({className} : {className:string}) {
     return (
