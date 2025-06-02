@@ -3,6 +3,14 @@ import { Menu } from "../types/common";
 import BrandIntro from "../features/brand/pages/BrandIntro";
 import DonationCampaign from "../features/brand/pages/DonationCampaign";
 import FuneralProcedure from "../features/funeral/pages/FuneralProcedure";
+import NormalFuneral from "../features/funeral/pages/NormalFuneral";
+import StoneFuneral from "../features/funeral/pages/StoneFuneral";
+import BranchIntro from "../features/branch/pages/BranchIntro";
+import Location from "../features/branch/pages/Location";
+import Boneservice from "../features/services/pages/Noncompaniedservice";
+import Cybermemorial from "../features/services/pages/Cybermemorial";
+import Funeralservice from "../features/services/pages/Funeralservice";
+import Noncompaniedservice from "../features/services/pages/Boneservice";
 
 //import Funeral from "../features/funeral/Funeral"; // ✅ Funeral 추가
 
@@ -10,7 +18,15 @@ import FuneralProcedure from "../features/funeral/pages/FuneralProcedure";
 export type ValidComponentPath =
   | "campain"
   | "brandstory"
-  | "procedures";
+  | "procedures"
+  | "price"
+  | "stoneprice"
+  | "store"
+  | "way"
+  | "boneservice"
+  | "cybermemorial"
+  | "funeralservice"
+  | "noncompaniedservice"
 
 type ComponentProps = {
     className: string;
@@ -24,6 +40,15 @@ const COMPONENT_MAP: Record<
   campain: DonationCampaign,
   brandstory: BrandIntro,
   procedures: FuneralProcedure,
+  price: NormalFuneral,
+  stoneprice: StoneFuneral,
+  store: BranchIntro,
+  way: Location,
+  boneservice: Boneservice,
+  cybermemorial: Cybermemorial,
+  funeralservice: Funeralservice,
+  noncompaniedservice: Noncompaniedservice,
+  
 };
  
 
