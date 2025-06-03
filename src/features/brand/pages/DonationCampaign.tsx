@@ -56,27 +56,33 @@ const DonationCampaign = () => {
       </section>
 
       {/* 유기견 리스트 */}
-      <section className="py-16 px-4">
+        <section className="py-16 px-4 bg-white">
         <h2 className="text-xl font-semibold text-center mb-10">입양을 기다리는 아이들</h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {/* 반복 요소로 분리 가능 */}
-          {[
-            { name: "뽀삐", age: "2살", src: "/images/dog1.jpg" },
-            { name: "루비", age: "1살", src: "/images/dog2.jpg" },
-            { name: "초코", age: "3살", src: "/images/dog3.jpg" },
-            { name: "단이", age: "5살", src: "/images/dog4.jpg" }
-          ].map((dog, idx) => (
-            <div key={idx} className="bg-white rounded-xl shadow p-4 text-center">
-              <img
-                src={dog.src}
-                alt={dog.name}
-                className="w-full h-32 object-cover rounded-md mb-2"
-              />
-              <h3 className="font-medium">{dog.name}</h3>
-              <p className="text-xs text-gray-500">{dog.age}</p>
-            </div>
-          ))}
+        <div className="overflow-hidden max-w-6xl mx-auto whitespace-nowrap">
+          <div className="animate-marquee flex gap-6 w-[calc(220px*20)] ">
+            {[
+              {  src: "https://pawfectwave.vercel.app/img/boost/b700.jpg" },
+              { src: "https://pawfectwave.vercel.app/img/boost/b100.jpg" },
+              {  src: "https://pawfectwave.vercel.app/img/boost/b1000.jpg" },
+              { src: "https://pawfectwave.vercel.app/img/boost/b200.jpg" },
+              { src: "https://pawfectwave.vercel.app/img/boost/b300.jpg" },
+              { src: "https://pawfectwave.vercel.app/img/boost/b400.jpg" },
+              { src: "https://pawfectwave.vercel.app/img/boost/b500.jpg" },
+              { src: "https://pawfectwave.vercel.app/img/boost/b600.jpg" },
+              { src: "https://pawfectwave.vercel.app/img/boost/b800.jpg" },
+              { src: "https://pawfectwave.vercel.app/img/boost/b900.jpg" },
+            ].flatMap(dog => [ dog]).map((dog, idx) => (
+               <div key={idx} className="w-[250px] flex-shrink-0 text-center">
+        <img
+          src={dog.src}
+          className="w-[388px] h-[509px] object-cover rounded-xl shadow mb-2"
+        />
+               
+                
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
