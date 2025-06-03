@@ -79,14 +79,14 @@ const SubRouter: React.FC<SubRouterProps> = ({ menu, componentNm }) => {
   return (
     <section>
       <div
-        className="flex items-center justify-center bg-white text-black p-8 xl:h-[600px] h-[100vw] text-white"
+        className="flex items-center justify-start bg-white pl-[330px]  text-black p-8 xl:h-[600px] h-[100vw] text-white"
         style={{
           background: `url(https://juhyun88.github.io/pawfectwave_team_react/img/subpage/${menu.code}.jpg) no-repeat center`,
           backgroundSize: "100%",
         }}
       >
         <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">{menu.title}</h1>
+          <h1 className="text-[80px] font-[700] mb-4">{menu.title}</h1>
           <p className="mt-2 text-sm"  >
             {menu.sub_title}
             <span >꼭 지워야해  {componentNm}</span>
