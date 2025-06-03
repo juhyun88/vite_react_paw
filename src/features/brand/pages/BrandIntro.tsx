@@ -8,7 +8,7 @@ function BrandIntro({ className = "" }: BrandIntroProps) {
   return (
     <section className={`bg-[#F7F7F5] ${className}`}>
       {/* 상단 텍스트 영역 */}
-      <div className="max-w-[1280px] mx-auto px-6 py-16 text-[#3A3A3A]">
+      <div className="max-w-[1280px] mx-auto px-6 py-[100px] text-[#3A3A3A]">
         <h2 className="text-[80px] font-[700] mb-[100px]">파워펙트 웨이브의 운영철학</h2>
         <p className="text-[30px] font-[400] leading-relaxed mb-10">
           "나의 가족을 대하듯, 성실하고 친절하게, 정직한 최고의 서비스를 제공하겠습니다."<br />
