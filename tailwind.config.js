@@ -32,6 +32,8 @@ export default {
         semibold: ['Paperlogy', "sans-serif"],
         bold: ['Paperlogy', "sans-serif"],
         mango: ['MangoDdobak-B', "sans-serif"],
+        ice: ['iceHimchan', 'sans-serif'],
+        hakgyo: ['"Hakgyoansim Gaeulsopung"', 'sans-serif'],
       },
       maxWidth: {
         container: "1400px",

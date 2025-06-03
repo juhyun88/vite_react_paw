@@ -32,7 +32,7 @@ const QuickMenu:React.FC = () =>{
               
                
                 <button
-                className='w-[72.09px] h-[72.09px] p-[16.2px] flex items-center gap-[16.2px] bg-white rounded-full shadow-xl'
+                className='w-[72.09px] h-[72.09px] p-[20.2px] flex items-center gap-[16.2px] bg-white rounded-full shadow-xl'
                 onClick={() => setIsExpanded(!isExpanded)}
             >
                 {isExpanded ? (
@@ -49,18 +49,11 @@ const QuickMenu:React.FC = () =>{
                     </svg>
                 ) : (
                    
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="46" viewBox="0 0 50 46" fill="none">
-                        <g clipPath="url(#clip0_683_5257)">
-                            <rect x="20" y="10" width="10" height="30" fill="#1E3932"/>
-                            <rect x="10" y="20" width="30" height="10" fill="#1E3932"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_683_5257">
-                                <rect width="49.72" height="45.6803" fill="white" transform="translate(0.160156 -0.00195312)"/>
-                            </clipPath>
-                        </defs>
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 1L16 31" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M1 15H31" stroke="black" stroke-width="2" stroke-linecap="round"/>
                     </svg>
-                )}
+                                    )}
               
                </button>
                 
