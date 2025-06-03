@@ -2,7 +2,7 @@
 
 function IntroSection() {
   return (
-    <div className="py-20 overflow-hidden bg-[#F7F7F5]">
+    <div className="py-[50px] md:py-[100px] overflow-hidden bg-[#F7F7F5]">
   <div className="md:w-[1280px] px-[37.5px] mx-auto grid md:grid-cols-2 grid-rows-3 gap-16 px-4" id="ehwave_love">
 
     {/* 사랑 - 이미지 */}

@@ -4,8 +4,8 @@ function QustionSection() {
     return (
            <div className="hidden md:inline text-gray-800">
       {/* 검색 영역 */}
-      <section className="py-36 bg-[url('https://pawfectwave.vercel.app/img/banner/banner200.jpg')] bg-cover bg-center text-center ">
-        <h2 className="text-[#3A3A3A] text-[60px] font-bold mb-6 mb-[122px]">무엇이 궁금하신가요?</h2>
+      <section className="py-[50px] md:py-[100px] bg-[url('https://pawfectwave.vercel.app/img/banner/banner200.jpg')] bg-cover bg-center text-center ">
+        <h2 className="text-[#3A3A3A] text-[60px] font-bold mb-6 mb-[100px]">무엇이 궁금하신가요?</h2>
         <div className="max-w-[1280px] flex items-center justify-center flex-col mx-auto px-4">
           <div className="flex flex-wrap justify-center  mt-6 gap-2 text-sm mb-[10px]">
             {['펫로스케어', '지점안내', '비용', '비동행장례', '자주묻는질문'].map((label) => (
@@ -17,7 +17,7 @@ function QustionSection() {
               </span>
             ))}
           </div>
-          <div className="flex items-center  border-[4px] border-[#1E3932] rounded-full px-4 h-[70px] w-[935px] bg-white shadow-md mb-[70px]">
+          <div className="flex items-center  border-[4px] border-[#1E3932] rounded-full px-4 h-[70px] w-[935px] bg-white shadow-md mb-[100px]">
             <input
               type="text"
               placeholder="검색어를 입력해주세요"

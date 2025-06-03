@@ -63,7 +63,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = '' }) => {
 
   return (
     <section
-      className={`hero-section  bg-cover bg-center min-h-screen z-0 md:mb-[80px] ${className}`}>
+      className={`hero-section  bg-cover bg-center min-h-screen z-0 mb-[50px] md:mb-[100px] ${className}`}>
         
          <Swiper
         modules={[Autoplay, EffectFade]}

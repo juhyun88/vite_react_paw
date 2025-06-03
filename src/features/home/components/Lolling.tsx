@@ -10,16 +10,16 @@ function Lolling() {
   ];
 
   return (
-    <div className="py-36">
+    <div className="py-[50px] md:py-[100px]">
         <div className="overflow-hidden whitespace-nowrap bg-white">
-        <div className="animate-marquee flex w-[calc(331px*14)] gap-[50px]">
+        <div className="animate-marquee flex w-[calc(331px*10)] ">
             {[...images, ...images].map((src, idx) => (
             <img
                 key={idx}
                 src={src}
                 alt={`rolling-${idx}`}
                 className="h-24 w-auto mx-4 flex-shrink-0 mx-2"
-                style={{ width: "331px", height: "169px", flexShrink: 0 }}
+                style={{ width: "200px", height: "100px", flexShrink: 0 }}
             />
             ))}
         </div>
