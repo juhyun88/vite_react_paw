@@ -95,6 +95,20 @@
         url('https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-9Black.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'iceHimchan';
+  src: url('/fonts/iceHimchan.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hakgyoansim Gaeulsopung';
+  src: url('/fonts/HakgyoansimGaeulsopung.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
 /* 전역 변수 */
 :root {
   --MainBrownLight: #A97D5E;
