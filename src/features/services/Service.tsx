@@ -4,6 +4,7 @@ import Cybermemorial from './pages/Cybermemorial';
 import Funeralservice from './pages/Funeralservice';
 import Noncompaniedservice from './pages/Noncompaniedservice';
 
+
 type ServiceProps = {
   className?: string;
   componentNm: string; // 라우터 값으로 

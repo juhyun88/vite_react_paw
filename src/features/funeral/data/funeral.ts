@@ -21,8 +21,8 @@ export const funeralPackages: PackageItem[] = [
                 · 발도장 스탬프 · 인연의 끈 · 털 보관) · 백자 유골함 · 보자기`,
   features: [],
   prices: [
-    { mainlabel: "15kg 이상", sublabel:"대형 동물", amount: "₩ 650,000" },
-    { mainlabel: "15kg 미만", sublabel:"일반 · 소동물", amount: "₩ 350,000" },
+    { mainlabel: "15kg 이상", sublabel:"대형 동물", amount: "₩ 650,000원" },
+    { mainlabel: "15kg 미만", sublabel:"일반 · 소동물", amount: "₩ 350,000원" },
     
   ],
 },
@@ -38,8 +38,8 @@ export const funeralPackages: PackageItem[] = [
                     + 고급 오동나무 관 · 고급 수의 · 꽃다발 서비스`,
     features: [],
     prices: [
-      { mainlabel: "15kg 이상", sublabel:"대형 동물", amount: "₩ 1,100,000" },
-      { mainlabel: "15kg 미만", sublabel:"일반 · 소동물", amount: "₩ 700,000" },
+      { mainlabel: "15kg 이상", sublabel:"대형 동물", amount: "₩ 1,100,000원" },
+      { mainlabel: "15kg 미만", sublabel:"일반 · 소동물", amount: "₩ 700,000원" },
     ],
   },
   {
@@ -53,14 +53,14 @@ export const funeralPackages: PackageItem[] = [
                     + 고급 오동나무 관 · 고급 수의 · 꽃다발 서비스`,
     features: [],
     prices: [
-         { mainlabel: "15kg 이상", sublabel:"대형 동물", amount: "₩ 750,000" },
-         { mainlabel: "15kg 미만", sublabel:"일반 · 소동물", amount: "₩ 1,200,000" },
-        { mainlabel: "상담 후 이용", sublabel:"소동물", amount: "₩ 650,000" }
+         { mainlabel: "15kg 이상", sublabel:"대형 동물", amount: "₩ 750,000원" },
+         { mainlabel: "15kg 미만", sublabel:"일반 · 소동물", amount: "₩ 1,200,000원" },
+        { mainlabel: "상담 후 이용", sublabel:"소동물", amount: "₩ 650,000원" }
     ],
   },
   {
     id: 4,
-    title: "프리미언 소풍 장례",
+    title: "프리미엄 소풍 장례",
     subtitle: "잠시, 먼 소풍을 떠나는 거예요",
     image: "https://pawfectwave.vercel.app/img/pc/sub_normalfuneral/funeral4.jpg",
     description: `장례 (염습 · 개별화장 · 단독추모실) · 추모 예식 서비스(편지쓰기
@@ -68,7 +68,7 @@ export const funeralPackages: PackageItem[] = [
                 + 프리미엄 관 M · 최고급 수의 · 무지개 다리 · 소풍 가방 · 들꽃 바구니`,
     features: [],
     prices: [
-      { mainlabel: "15kg 미만", sublabel: "일반 · 소동물", amount: "₩ 1,350,000" },
+      { mainlabel: "15kg 미만", sublabel: "일반 · 소동물", amount: "₩ 1,350,000원" },
     ],
   },
 ];
@@ -111,3 +111,72 @@ export const itemContents = [
     image: "https://pawfectwave.vercel.app/img/pc/sub_normalfuneral/funeral8.jpg",
   },
 ];
+
+export const stonePackages: PackageItem[] = [
+  {
+    id: 1,
+    title: "기본 스톤 장례",
+    subtitle: "", // ← 이 줄 추가
+    tag: "",
+    image: "https://pawfectwave.vercel.app/img/pc/02/300/rock100.jpg",
+    description: `-장례 서비스 (단독 추모실, 국화 헌화, 개별화장, 보자기)
+                  -추모 서비스 (편지지, 붉은 실, 발 도장 키트, 털 간직 키트)
+                  -메모리얼 스톤 제작+유리 스톤함`,
+    features: [],
+    prices: [
+      { mainlabel: "15kg 이상", sublabel:"대형 동물", amount: "₩ 650,000원" },
+      { mainlabel: "15kg 미만", sublabel:"일반 · 소동물", amount: "₩ 450,000원" },
+      { mainlabel: "상담 후 이용", sublabel:"소동물", amount: "₩ 250,000원" },
+      
+    ],
+  },
+  
+    {
+      id: 2,
+      title: "스카이 스톤 장례 Ⅰ",
+      subtitle: "",
+      tag: "",
+      image: "https://pawfectwave.vercel.app/img/pc/02/300/rock200.jpg",
+      description: `- 장례 서비스 (단독 추모실, 국화 헌화, 개별화장, 보자기)
+                    -추모 서비스 (편지지, 붉은 실, 발 도장 키트, 털 간직 키트)
+                    -염습+ 고급 수의 + 고급 관
+                    -메모리얼 스톤 제작+유리 스톤함+원목 액자
+`,
+      features: [],
+      prices: [
+        { mainlabel: "15kg 이상", sublabel:"대형 동물", amount: "₩ 950,000원" },
+        { mainlabel: "15kg 미만", sublabel:"일반 · 소동물", amount: "₩ 700,000원" },
+        { mainlabel: "상담 후 이용", sublabel:"소동물", amount: "₩ 450,000원" },
+      ],
+    },
+    {
+      id: 3,
+      title: "요람 스톤 장례 IⅠ",
+      subtitle: "",
+      tag: "",
+      image: "https://pawfectwave.vercel.app/img/pc/02/300/rock300.jpg",
+      description: `-장례 서비스 (단독 추모실, 국화 헌화, 개별화장, 보자기)
+                    -추모 서비스 (편지지, 붉은 실, 발 도장 키트, 털 간직 키트)
+                    -염습+ 이불 세트 + 고급 요람 + 생화 꽃 장식 (소량)
+                    -메모리얼 스톤 제작+유리 스톤함+원목 액자`,
+      features: [],
+      prices: [
+       
+          { mainlabel: "상담 후 이용", sublabel:"문의", amount: "₩ 900,000원" }
+      ],
+    },
+    {
+      id: 4,
+      title: "프리미엄 스톤 장례",
+      subtitle: "",
+      image: "https://pawfectwave.vercel.app/img/pc/02/300/rock400.jpg",
+      description: `-장례 서비스 (단독 추모실, 국화 헌화, 개별화장, 보자기)
+                    -추모 서비스 (편지지, 붉은 실, 발 도장 키트, 털 간직 키트)
+                    -염습+ 최고급 수의 + 최고급 관 + 생화 꽃 장식 (소량)
+                    -메모리얼 스톤 제작+호두나무 스톤함(3종 中 택1)+아크릴 액자`,
+      features: [],
+      prices: [
+        { mainlabel: "상담 후 이용", sublabel:"문의", amount: "₩ 1,150,000원" }
+      ],
+    },
+  ];
