@@ -77,19 +77,19 @@ function QustionSection() {
               <span className="mt-2 text-[#3A3A3A] text-[20px] font-[400]">방문서비스</span>
             </div>
             <div className="flex flex-col items-center w-[146.3px] h-[146.3px] py-[27px] px-[15.5px] gap-[10px]">
-            <img
-                src="https://pawfectwave.vercel.app/img/pc/01/100/icon/pcanimal_icon500.jpg"
-                alt="phone"
-                className="bg-transparent"
-              />
+           <svg xmlns="http://www.w3.org/2000/svg" width="147" height="148" viewBox="0 0 147 148" fill="none">
+            <rect x="0.300781" y="0.835938" width="146.3" height="146.3" fill="url(#pattern0_1130_8277)"/>
+            
+            </svg>
               <span className="mt-2 text-[#3A3A3A] text-[20px] font-[400]">방문서비스</span>
             </div>
             <div className="flex flex-col items-center w-[146.3px] h-[146.3px] py-[27px] px-[15.5px] gap-[10px]">
-            <img
-              src="https://pawfectwave.vercel.app/img/pc/01/100/icon/pcanimal_icon600.jpg"
-              alt="houes"
-              className="bg-transparent"
-            />
+           <svg width="147" height="147" viewBox="0 0 147 147" fill="none" xmlns="http://www.w3.org/2000/svg">
+            
+            
+            
+            
+            </svg>
               <span className="mt-2 text-[#3A3A3A] text-[20px] font-[400]">방문서비스</span>
             </div>
           </div>

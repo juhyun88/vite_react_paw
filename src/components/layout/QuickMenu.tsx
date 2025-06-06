@@ -1,7 +1,19 @@
 import React, { useState } from 'react';
+import { supabase } from '../../lib/supabaseClient';
+
 
 const QuickMenu:React.FC = () =>{
       const [isExpanded, setIsExpanded] = useState(false);
+        const [showModal, setShowModal] = useState(false);
+      
+           // 예약하기 누르면 나오는 모달
+          const openKakaoChat = () => {
+            window.open("https://pf.kakao.com/_YOUR_CHANNEL_ID/chat", "_blank");
+          };
+      
+          const callPhone = () => {
+            window.location.href = "tel:010-1234-5678";
+          };
     return (
 
 
@@ -10,12 +22,215 @@ const QuickMenu:React.FC = () =>{
 
           {isExpanded && (
                 <>
-                       <a href="" className='w-[72.09px] h-[72.09px] flex items-center justify-center gap-[8px] bg-white rounded-full shadow-xl'>
+                       <button
+                        onClick={() => setShowModal(true)}
+                        className='w-[72.09px] h-[72.09px] flex items-center justify-center gap-[8px] bg-white rounded-full shadow-xl'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" >
                         <path d="M28.2848 23.1296C28.7145 23.1296 29.1265 22.959 29.4304 22.6552C29.7342 22.3514 29.9048 21.9393 29.9048 21.5096C29.9048 21.08 29.7342 20.6679 29.4304 20.3641C29.1265 20.0603 28.7145 19.8896 28.2848 19.8896C27.8552 19.8896 27.4431 20.0603 27.1393 20.3641C26.8355 20.6679 26.6648 21.08 26.6648 21.5096C26.6648 21.9393 26.8355 22.3514 27.1393 22.6552C27.4431 22.959 27.8552 23.1296 28.2848 23.1296ZM28.2848 29.6096C28.7145 29.6096 29.1265 29.439 29.4304 29.1352C29.7342 28.8314 29.9048 28.4193 29.9048 27.9896C29.9048 27.56 29.7342 27.1479 29.4304 26.8441C29.1265 26.5403 28.7145 26.3696 28.2848 26.3696C27.8552 26.3696 27.4431 26.5403 27.1393 26.8441C26.8355 27.1479 26.6648 27.56 26.6648 27.9896C26.6648 28.4193 26.8355 28.8314 27.1393 29.1352C27.4431 29.439 27.8552 29.6096 28.2848 29.6096ZM21.8048 21.5096C21.8048 21.9393 21.6342 22.3514 21.3304 22.6552C21.0265 22.959 20.6145 23.1296 20.1848 23.1296C19.7552 23.1296 19.3431 22.959 19.0393 22.6552C18.7355 22.3514 18.5648 21.9393 18.5648 21.5096C18.5648 21.08 18.7355 20.6679 19.0393 20.3641C19.3431 20.0603 19.7552 19.8896 20.1848 19.8896C20.6145 19.8896 21.0265 20.0603 21.3304 20.3641C21.6342 20.6679 21.8048 21.08 21.8048 21.5096ZM21.8048 27.9896C21.8048 28.4193 21.6342 28.8314 21.3304 29.1352C21.0265 29.439 20.6145 29.6096 20.1848 29.6096C19.7552 29.6096 19.3431 29.439 19.0393 29.1352C18.7355 28.8314 18.5648 28.4193 18.5648 27.9896C18.5648 27.56 18.7355 27.1479 19.0393 26.8441C19.3431 26.5403 19.7552 26.3696 20.1848 26.3696C20.6145 26.3696 21.0265 26.5403 21.3304 26.8441C21.6342 27.1479 21.8048 27.56 21.8048 27.9896ZM12.0848 23.1296C12.5145 23.1296 12.9265 22.959 13.2304 22.6552C13.5342 22.3514 13.7048 21.9393 13.7048 21.5096C13.7048 21.08 13.5342 20.6679 13.2304 20.3641C12.9265 20.0603 12.5145 19.8896 12.0848 19.8896C11.6552 19.8896 11.2431 20.0603 10.9393 20.3641C10.6355 20.6679 10.4648 21.08 10.4648 21.5096C10.4648 21.9393 10.6355 22.3514 10.9393 22.6552C11.2431 22.959 11.6552 23.1296 12.0848 23.1296ZM12.0848 29.6096C12.5145 29.6096 12.9265 29.439 13.2304 29.1352C13.5342 28.8314 13.7048 28.4193 13.7048 27.9896C13.7048 27.56 13.5342 27.1479 13.2304 26.8441C12.9265 26.5403 12.5145 26.3696 12.0848 26.3696C11.6552 26.3696 11.2431 26.5403 10.9393 26.8441C10.6355 27.1479 10.4648 27.56 10.4648 27.9896C10.4648 28.4193 10.6355 28.8314 10.9393 29.1352C11.2431 29.439 11.6552 29.6096 12.0848 29.6096Z" fill="#1E3932"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0829 3.28418C12.4051 3.28418 12.7142 3.41219 12.942 3.64004C13.1699 3.8679 13.2979 4.17694 13.2979 4.49918V5.73524C14.3704 5.71418 15.5513 5.71418 16.8506 5.71418H23.5136C24.8145 5.71418 25.9955 5.71418 27.0679 5.73524V4.49918C27.0679 4.17694 27.1959 3.8679 27.4238 3.64004C27.6516 3.41219 27.9607 3.28418 28.2829 3.28418C28.6051 3.28418 28.9142 3.41219 29.142 3.64004C29.3699 3.8679 29.4979 4.17694 29.4979 4.49918V5.83892C29.9191 5.87132 30.3182 5.91236 30.6951 5.96204C32.5937 6.218 34.1311 6.75584 35.3445 7.9676C36.5563 9.18098 37.0941 10.7184 37.3501 12.617C37.5979 14.4638 37.5979 16.8209 37.5979 19.7985V23.2199C37.5979 26.1975 37.5979 28.5562 37.3501 30.4014C37.0941 32.3 36.5563 33.8374 35.3445 35.0508C34.1311 36.2625 32.5937 36.8004 30.6951 37.0563C28.8483 37.3042 26.4912 37.3042 23.5136 37.3042H16.8538C13.8763 37.3042 11.5175 37.3042 9.67235 37.0563C7.77371 36.8004 6.23633 36.2625 5.02295 35.0508C3.81119 33.8374 3.27335 32.3 3.01739 30.4014C2.76953 28.5546 2.76953 26.1975 2.76953 23.2199V19.7985C2.76953 16.8209 2.76953 14.4622 3.01739 12.617C3.27335 10.7184 3.81119 9.18098 5.02295 7.9676C6.23633 6.75584 7.77371 6.218 9.67235 5.96204C10.0504 5.91236 10.4494 5.87132 10.8695 5.83892V4.49918C10.8695 4.17722 10.9973 3.86843 11.2248 3.64062C11.4523 3.41281 11.761 3.28461 12.0829 3.28418ZM9.99311 8.37098C8.36501 8.58968 7.42541 9.00116 6.74015 9.68642C6.05489 10.3717 5.64341 11.3113 5.42471 12.9394C5.38799 13.2148 5.35667 13.5058 5.33075 13.8126H35.0351C35.0092 13.5058 34.9778 13.2142 34.9411 12.9378C34.7224 11.3097 34.3109 10.3701 33.6257 9.6848C32.9404 8.99954 32.0008 8.58806 30.3711 8.36936C28.7074 8.1458 26.5123 8.14256 23.4229 8.14256H16.9429C13.8536 8.14256 11.6601 8.14742 9.99311 8.37098ZM5.19791 19.8892C5.19791 18.5057 5.19791 17.302 5.21897 16.2442H35.1469C35.1679 17.302 35.1679 18.5057 35.1679 19.8892V23.1292C35.1679 26.2185 35.1647 28.4136 34.9411 30.079C34.7224 31.7071 34.3109 32.6467 33.6257 33.3319C32.9404 34.0172 32.0008 34.4287 30.3711 34.6474C28.7074 34.8709 26.5123 34.8742 23.4229 34.8742H16.9429C13.8536 34.8742 11.6601 34.8709 9.99311 34.6474C8.36501 34.4287 7.42541 34.0172 6.74015 33.3319C6.05489 32.6467 5.64341 31.7071 5.42471 30.0774C5.20115 28.4136 5.19791 26.2185 5.19791 23.1292V19.8892Z" fill="#1E3932"/>
+                        
                         </svg>
-                        </a>
+                        
+                        </button>
+                           {showModal && (
+                            <div
+                                className="fixed inset-0 z-[9999] bg-black/40 flex justify-end items-end p-10"
+                                onClick={() => setShowModal(false)}
+                            >
+                                <div
+                                className="bg-white rounded-3xl w-full max-w-md px-6 shadow-lg animate-slide-up z-90"
+                                onClick={(e) => e.stopPropagation()}
+                                >
+              
+                    {/* X 버튼 (모달 닫기) */}
+                    <button
+                      className="absolute right-14 bg-gray-300 rounded-full w-6 h-6 flex items-center justify-center text-gray-700"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setShowModal(false);
+                      }}
+                    >
+                      ✖
+                    </button>
+
+                    {/* 이미지 */}
+                    <div className="relative">
+                 
+                      <button className="absolute bottom-2 right-4 bg-white/80 text-xs px-3 py-1 rounded-full">
+                        운영시간 보기 →
+                      </button>
+                    </div>
+
+                    {/* 텍스트 */}
+                    <div className="mt-5 text-center">
+                      <p className="font-medium text-gray-800 text-sm leading-relaxed">
+                        파우펙트웨이브 반려동물 장례식장
+                        <br />
+                        보호자님, 예약을 위해 아래 정보를 입력해주세요.
+                      </p>
+                    </div>
+
+                    {/* 온라인 예약 폼 */}
+                    <form
+                      className="mt-6 space-y-4"
+                      onSubmit={async(e) => {
+                        e.preventDefault();
+                        // TODO: 폼 제출 처리 함수 호출
+                             const form = e.target as HTMLFormElement;
+                                const name = (form.ownerName as HTMLInputElement).value;
+                                const phone = (form.phone as HTMLInputElement).value;
+                                const date = (form.reservationDate as HTMLInputElement).value;
+                                const time = "10:00:00"; // ← 필요 시 time 필드도 입력받게 확장 가능
+                                const notes = (form.notes as HTMLTextAreaElement).value || 'EMPTY';
+                                const service_type = "장례서비스"; // 또는 드롭다운으로 사용자 선택 가능
+                                const status = "대기";
+
+                           const { data, error } = await supabase.from('online_reservations').insert([
+                            {
+                                name,
+                                phone,
+                                service_type,
+                                date,
+                                time,
+                                notes,
+                                status
+                            },
+                            ]);
+
+                       if (error) {
+                            console.error('❌ Supabase Insert Error:', error.message);
+                            alert(`예약 처리 중 오류 발생: ${error.message}`);
+                            } else {
+                            console.log('✅ 예약 성공:', data);
+                            alert('예약이 접수되었습니다!');
+                            setShowModal(false);
+                            }
+                            if (error) {
+                            console.error('Supabase Insert Error:', error);
+                            } else {
+                            console.log('Insert succeeded:', data);
+                            }
+                        }}
+                        >
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          보호자 이름
+                        </label>
+                        <input
+                          type="text"
+                          name="ownerName"
+                          required
+                          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#8D6544]"
+                          placeholder="이름을 입력하세요"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          연락처
+                        </label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          required
+                          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#8D6544]"
+                          placeholder="010-1234-5678"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          예약 희망 날짜
+                        </label>
+                        <input
+                          type="date"
+                          name="reservationDate"
+                          required
+                          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#8D6544]"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                          추가 요청 사항
+                        </label>
+                        <textarea
+                          name="notes"
+                          rows={3}
+                          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#8D6544]"
+                          placeholder="특별히 요청하실 내용이 있으면 작성해주세요 (선택)"
+                        />
+                      </div>
+
+                      <button
+                        type="submit"
+                        className="w-full bg-[#8D6544] text-white py-3 rounded-full flex justify-center items-center gap-2"
+                      >
+                        예약하기
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          className="w-5 h-5"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                          />
+                        </svg>
+                      </button>
+                    </form>
+
+                    {/* 다른 방법으로 문의 */}
+                    <div className="mt-6 text-center">
+                      <p className="text-sm text-gray-600 mb-2">다른 방법으로 문의</p>
+                      <div className="flex justify-center gap-4">
+                        <button
+                          onClick={openKakaoChat}
+                          className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center"
+                        >
+                          💬
+                        </button>
+                        <button
+                          onClick={callPhone}
+                          className="w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center"
+                        >
+                          📞
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Bottom Tab Navigation */}
+                    <nav className="w-full h-16 border-t flex justify-around items-center text-sm text-gray-600 mt-4">
+                      <button
+                        className="flex flex-col items-center focus:outline-none"
+                        onClick={() => (window.location.href = '/')}
+                      >
+                        <span>🏠</span>
+                        <span>홈</span>
+                      </button>
+                      <button
+                        className="flex flex-col items-center focus:outline-none"
+                        onClick={() => window.open('https://chat.example.com', '_blank')}
+                      >
+                        <span>💬</span>
+                        <span>대화</span>
+                      </button>
+                      <button
+                        className="flex flex-col items-center focus:outline-none"
+                        onClick={() => (window.location.href = '/settings')}
+                      >
+                        <span>⚙️</span>
+                        <span>설정</span>
+                      </button>
+                    </nav>
+                  </div>
+                </div>
+                
+            )}
 
                       <a href="" className='w-[72.3px] h-[72.3px] p-[16.87px] flex items-center gap-[24.1px] bg-white rounded-full shadow-xl'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
