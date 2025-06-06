@@ -89,7 +89,7 @@ const SubRouter: React.FC<SubRouterProps> = ({ menu, componentNm }) => {
           <h1 className="text-[80px] font-[700] mb-4">{menu.title}</h1>
           <p className="mt-2 text-sm"  >
             {menu.sub_title}
-            <span >꼭 지워야해  {componentNm}</span>
+            <span >전체적으로 적용시킬때  {componentNm}</span>
            
           </p>
         </div>
