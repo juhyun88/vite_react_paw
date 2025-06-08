@@ -20,13 +20,14 @@ const Header: React.FC<HeaderProps> = ({ menuArr }) => {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
    const [openMenus, setOpenMenus] = useState<{ [key: string]: boolean }>({});
 
-   const toggleSubMenu = (code:number) => {
-    const key = String(code);
-    setOpenMenus((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
-  };
+const toggleSubMenu = (code: number) => {
+  const key = String(code);
+  setOpenMenus((prev) => {
+    const isCurrentlyOpen = prev[key];
+    // 모든 메뉴를 닫고, 현재 메뉴만 토글
+    return isCurrentlyOpen ? {} : { [key]: true };
+  });
+};
   
   const [scrolled, setScrolled] = useState(false);
 

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const tabList = [
     { key: "carry", label: "운구서비스" },
     { key: "nonvisit", label: "비동행장례서비스" },
-    { key: "storage", label: "원시안치,산골" },
+    { key: "storage", label: "임시안치,산골" },
   ];
 
 function Funeralservice({className} : {className:string}) {
@@ -23,9 +23,9 @@ function Funeralservice({className} : {className:string}) {
                     <div className={`${className} flex justify-center bg-[#F7F7F5]`}>
                 <div className="w-[1280px] mx-auto">
                 {/* Hero Section */}
-                        <section className="flex flex-col justify-center text-center ">
+                        <section className="flex flex-col justify-center text-center my-[100px]">
                             <h1 className="text-[80px] text-[#3A3A3A] font-[700] mb-[100px]">파우펙트 웨이브의 운구 서비스</h1>
-                            <p className="text-[35px] text-[#3A3A3A] font-[400] mb-[100px]">장례식장 방문 시, 차량이 없거나 운전이 불가능할 경우<br />
+                            <p className="text-[35px] text-[#3A3A3A] font-[400] mb-[50px]">장례식장 방문 시, 차량이 없거나 운전이 불가능할 경우<br />
                             운구차량으로 보호자님과 아이를 안전하게 모시는 서비스입니다.</p>
                          </section>
                     
