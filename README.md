@@ -18,29 +18,56 @@ React를 이용하여 현대적이고 직관적인 UI구축을 통해 UX 개선�
 + 펫 병원과의 콜라보로 연계 사이트 제작
 
 ## 02.팀 소개
+![팀](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/teamface.png)
 
-<div style="display: flex; justify-content: space-between;">
-  <span>branch -eunhye</span>
-  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;branch -juhyun</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;branch -eunhye &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  branch -juhyun  
 
-![팀소개](https://raw.githubusercontent.com/juhyun88/pawfectwave_team_react/bc2b61a818cc001d56c96675f0d0e56f49369974/Group%2018.svg)
-<div style="display: flex; justify-content: space-between;">
-  <span>branch -soyeong</span>
-  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;branch -hyuna</span>
-</div>
-</div>
++  기획자 & 디자이너: 정은혜  
+ – 서비스 구조 설계, 콘텐츠 기획  
+ – 감정 색상 체계, UI/UX 컴포넌트 설계  
+ 
++  프론트엔드 & DB 연동: 신주현  
+ – Supabase 구조 설계 및 연동, 상태관리
 
 
 ## 03.개발 환경
+| 항목      | 내용 |
+|-----------|------|
+|개발 언어|	JavaScript, TypeScript|
+|프레임워크|	React (CRA, Vite 등)|
+|스타일링|	Tailwind CSS, SCSS, styled-components 등|
+|빌드 도구|	Vite, Webpack 등|
+|코드 포맷터|	Prettier, ESLint|
+|배포 환경|	GitHub Pages / Vercel / Netlify 등|
 
+## 04.설치모듈
+노드 22버전 / npm 18버전  
+ "axios": "^1.8.3",  
+ "bootstrap": "^5.3.3",  
+ "bootstrap-icons": "^1.11.3",  
+ "cra-template": "1.2.0",  
+      "react": "^19.0.0",  
+       "react-bootstrap": "^2.10.7",  
+        "react-dom": "^19.0.0",  
+        "react-router-dom": "^7.0.2",  
+        "react-scripts": "5.0.1",  
+        "sass": "^1.83.0",  
+        "styled-components": "^6.1.13",  
+        "swiper": "^8.4.7",  
+        "web-vitals": "^2.1.4"
+    
 
-## 04.설계
+## 05.UXUI관련
++ 반응형 디자인: 모바일, 태블릿, 데스크탑 최적화
++ 접근성 고려: 시멘틱 태그 사용, alt 텍스트 등
++ 컴포넌트 구조화: 재사용 가능한 UI 컴포넌트 설계
++ 사용자 흐름 중심 UI: 직관적인 네비게이션과 인터랙션
++ 애니메이션 및 전환 효과: Framer Motion 등으로 부드러운 UX 구현
 
+## 06.슈퍼바이스
+![슈퍼바이스](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/superbase.jpg)
 
-## 05.개발워크플로우
-
-
-## 06.브랜드소개
+## 07.브랜드소개
 + [로고](#로고)
 + [폰트](#폰트)
 + [컬러](#컬러)
@@ -70,6 +97,8 @@ React를 이용하여 현대적이고 직관적인 UI구축을 통해 UX 개선�
 |PFW Brown|![메인브라운컬러3](https://github.com/juhyun88/pawfectwave_team_react/blob/main/img/svg/lightbrown3.svg) #754B42|
 
 ### 프레젠테이션
-[프레젠테이션바로가기](https://www.figma.com/design/KjRhD2lZc2SK6LIPEwqjuA/%ED%8C%8C%EC%9A%B0%ED%8E%99%ED%8A%B8-%EC%9B%A8%EC%9D%B4%EB%B8%8C?node-id=253-168&p=f&t=Xf0zXGV45pdHvQiA-0)
+[프레젠테이션바로가기](https://www.figma.com/design/MWeGfKt7TsHDUceHnbdWZP/%EB%84%A4%EC%9D%B4%EB%B2%84-%EC%95%A0%EB%84%90%EB%A6%AC%ED%8B%B1%EC%8A%A4-%EC%A0%81%EC%9A%A9%EB%A9%94%EB%89%B4%EC%96%BC?node-id=96-4&p=f&t=WlbEuZwSzy0kH3TH-0)
 
 
+### 데이터흐름 및 Supabase연동
+![데이터흐름 및 Supabase연동](https://github.com/juhyun88/vite_react_paw/public/데이터흐름 및 Supabase연동.jpg)
