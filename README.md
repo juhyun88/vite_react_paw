@@ -101,4 +101,4 @@ React를 이용하여 현대적이고 직관적인 UI구축을 통해 UX 개선�
 
 
 ### 데이터흐름 및 Supabase연동
-![데이터흐름 및 Supabase연동](https://github.com/juhyun88/vite_react_paw/public/데이터흐름 및 Supabase연동.jpg)
+![데이터흐름 및 Supabase연동](https://github.com/juhyun88/vite_react_paw/blob/main/public/%EB%8D%B0%EC%9D%B4%ED%84%B0%ED%9D%90%EB%A6%84%20%EB%B0%8F%20Supabase%EC%97%B0%EB%8F%99.jpg)
