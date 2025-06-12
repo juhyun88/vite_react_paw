@@ -11,7 +11,7 @@ import Noncompaniedservice from "../features/services/pages/Noncompaniedservice"
 import Cybermemorial from "../features/services/pages/Cybermemorial";
 import Funeralservice from "../features/services/pages/Funeralservice";
 import Boneservice from "../features/services/pages/Boneservice";
-import Hospital from "../features/support/components/Hospital";
+import Measure from "../features/support/components/Measure";
 import Insurance from "../features/support/components/Insurance";
 import Petroscare from "../features/support/components/Petroscare";
 import Question from "../features/support/components/Question";
@@ -32,7 +32,7 @@ export type ValidComponentPath =
   | "cybermemorial"
   | "funeralservice"
   | "noncompaniedservice"
-  | "hospital"
+  | "measure"
   | "insurance"
   | "petlose"
   | "question"
@@ -59,7 +59,7 @@ const COMPONENT_MAP: Record<
   cybermemorial: Cybermemorial,
   funeralservice: Funeralservice,
   noncompaniedservice: Noncompaniedservice,
-  hospital: Hospital,
+  measure: Measure,
   insurance: Insurance,
   petlose: Petroscare,
   question: Question,  

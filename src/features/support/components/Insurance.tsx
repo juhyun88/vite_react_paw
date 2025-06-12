@@ -1,11 +1,11 @@
 
 
-function Insurance({className} : {className:string}) {
+const Insurance = () => {
     return (
-        <div className={className}>
-            펫보험
+        <div>
+            
         </div>
     );
-}
+};
 
 export default Insurance;

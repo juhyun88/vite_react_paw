@@ -31,15 +31,22 @@ const toggleSubMenu = (code: number) => {
   
   const [scrolled, setScrolled] = useState(false);
 
+  
+
   useEffect(() => {
   const handleScroll = () => {
     setScrolled(window.scrollY > 700);
   };
 
+  
+
     window.addEventListener("scroll", handleScroll);
   return () => window.removeEventListener("scroll", handleScroll);
 }, []);
   
+
+
+
 
     return (
         <header className={`px-[15px] md:px-[30px] xl:px-[50px] z-20 fixed left-0 right-0 top-0 transition-colors duration-500 ${scrolled ? 'bg-[rgba(31,38,37,0.9)]' : ''}`}>
@@ -207,14 +214,10 @@ const toggleSubMenu = (code: number) => {
                 <div className="hidden lg:flex items-center z-20 ">
                     <ul className="reservation flex justify-end items-center mb-0 p-0 gap-[30px]">
                         <li>
-                        <Link to="/openapi/map">
-                        <span className="block lg:block main-primery">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <path d="M20.2148 14.2744C20.2148 15.3021 19.8066 16.2877 19.0799 17.0145C18.3532 17.7412 17.3676 18.1494 16.3398 18.1494C15.3121 18.1494 14.3265 17.7412 13.5998 17.0145C12.8731 16.2877 12.4648 15.3021 12.4648 14.2744C12.4648 13.2467 12.8731 12.2611 13.5998 11.5344C14.3265 10.8077 15.3121 10.3994 16.3398 10.3994C17.3676 10.3994 18.3532 10.8077 19.0799 11.5344C19.8066 12.2611 20.2148 13.2467 20.2148 14.2744Z" stroke="white" stroke-width="1.9375" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M26.0273 14.2744C26.0273 23.4995 16.3398 28.8057 16.3398 28.8057C16.3398 28.8057 6.65234 23.4995 6.65234 14.2744C6.65234 11.7051 7.67299 9.24108 9.48975 7.42432C11.3065 5.60756 13.7706 4.58691 16.3398 4.58691C18.9091 4.58691 21.3732 5.60756 23.1899 7.42432C25.0067 9.24108 26.0273 11.7051 26.0273 14.2744Z" stroke="white" stroke-width="1.9375" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
-                        </Link>
+                          <Link to="/openapi/map" className="flex flex-col items-center">
+                            <span className="main-primery">지도보기</span>
+                     
+                          </Link>
                         </li>
                         
                        
