@@ -72,7 +72,7 @@ const handlePasswordCheck = () => {
 
   return (
     <div className={className}>
-      <div className="p-4 max-w-4xl mx-auto">
+      <div className="p-4 max-w-4xl mx-auto md:py-[100px] py-[80px]">
         <h1 className="text-xl font-bold mb-4">
           문의하신 내용에 대한 답변을 확인하실 수 있습니다.
         </h1>

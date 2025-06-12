@@ -77,20 +77,19 @@ type SubRouterProps = {
 const SubRouter: React.FC<SubRouterProps> = ({ menu, componentNm }) => {
   const DynamicComponent = COMPONENT_MAP[componentNm];
   return (
-    <section>
-      <div
-        className="flex items-center justify-start bg-white pl-[330px]  text-black p-8 xl:h-[600px] h-[100vw] text-white"
-        style={{
-          background: `url(https://juhyun88.github.io/pawfectwave_team_react/img/subpage/${menu.code}.jpg) no-repeat center`,
-          backgroundSize: "100%",
-        }}
-      >
-        <div className="text-center">
-          <h1 className="text-[80px] font-[700] mb-4">{menu.title}</h1>
+            <section>
+            <div
+          className="flex items-center justify-start bg-white text-black p-8 text-white
+                    h-[70vw] md:h-[600px] " // 모바일 높이 고정 (70vw 정도가 적절)
+          style={{
+            background: `url(https://juhyun88.github.io/pawfectwave_team_react/img/subpage/${menu.code}.jpg) no-repeat center center`,
+            backgroundSize: "cover", // 너비/높이 모두 꽉 채우기
+          }}
+        >
+        <div className="max-w-[1200px] mx-auto w-[100%]">
+          <h1 className="md:text-[80px] font-[700] md:mb-4  mb-2" style={{ fontSize: 'clamp(20px, 6vw, 80px)', lineHeight : 1 }}>{menu.title}</h1>
           <p className="mt-2 text-sm"  >
             {menu.sub_title}
-            <span >전체적으로 적용시킬때  {componentNm}</span>
-           
           </p>
         </div>
       </div>
@@ -98,7 +97,9 @@ const SubRouter: React.FC<SubRouterProps> = ({ menu, componentNm }) => {
       {/* ✅ Brand와 Funeral 컴포넌트를 올바르게 렌더링 */}
       <div>
       {DynamicComponent ? (
+         <div>
           <DynamicComponent className="" />
+          </div>
         ) : (
           <div className="text-center py-12 text-red-500">잘못된 컴포넌트 경로입니다.</div>
         )}       

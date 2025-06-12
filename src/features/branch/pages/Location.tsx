@@ -3,8 +3,8 @@ import { branches, Branch } from "../data/branches";
 function Location({ className }: { className: string }) {
   return (
     <div className={`flex justify-center bg-[#F7F7F5] ${className}`}>
-      <div className="w-full max-w-[1280px] px-4 py-[100px]">
-        <section className="text-center mb-[100px]">
+      <div className="w-full max-w-[1280px] px-4 md:py-[100px] py-[80px]">
+        <section className="text-center md:mb-[100px] mb-[80px]">
           <h1 className="text-[50px] md:text-[80px] text-[#3A3A3A] font-[700]">파우펙트 웨이브 지점</h1>
         </section>
 

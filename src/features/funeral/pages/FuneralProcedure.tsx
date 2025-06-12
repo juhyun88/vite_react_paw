@@ -19,7 +19,7 @@ function FuneralProcedure({
   className = "",
 }: FuneralProcedureProps) {
   return (
-    <div className={`flex flex-col md:flex-row items-start gap-[143px] py-[100px] border-b border-gray-200 ${className}`}>
+    <div className={`flex flex-col md:flex-row items-start gap-[80px] md:py-[100px] py-[80px] border-b border-gray-200 ${className}`}>
       <img
         src={imageSrc}
         alt={stepTitle}
@@ -49,13 +49,13 @@ function FuneralProcedure({
 // 페이지 전체 컴포넌트
 export default function ProcessPage() {
   return (
-    <section className="bg-[#FAF9F7] mt-[50px]">
+    <section className="bg-[#FAF9F7] md:mt-[100px]">
       {/* 상단 전체 너비 이미지 */}
       <div className="w-full">
         <img
           src="https://pawfectwave.vercel.app/img/explanation/banner.png"
           alt="Top banner"
-          className="w-full object-cover mb-[100px]"
+          className="w-full object-cover md:mb-[50px] mb-[0px]"
         />
       </div>
 

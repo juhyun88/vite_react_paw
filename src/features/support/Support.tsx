@@ -1,5 +1,5 @@
 import React from "react";
-import Hospital from './components/Hospital';
+import Measure from './components/Measure';
 import Insurance from './components/Insurance';
 import Petroscare from './components/Petroscare';
 import Question from './components/Question';
@@ -11,7 +11,7 @@ type SupportProps = {
 };
 
 const COMPONENT_MAP = {
-    hospital: Hospital as React.FC<{ className?: string }>,
+    Measure: Measure as React.FC<{ className?: string }>,
     insurance: Insurance as React.FC<{ className?: string }>,
     petlose: Petroscare as React.FC<{ className?: string }>,
     question: Question as React.FC<{ className?: string }>,

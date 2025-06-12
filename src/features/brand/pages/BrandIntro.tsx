@@ -17,82 +17,85 @@ export default function PawfectWaveLayout() {
   }, []);
 
   return (
-    <div className="w-[1280px] mx-auto grid grid-cols-[1fr_20px_1fr] gap-2 p-8 relative py-[100px]">
+    <div className="w-full max-w-[1280px] mx-auto flex flex-col md:grid md:grid-cols-[1fr_20px_1fr] gap-2 px-4 md:p-8 relative md:py-[100px]">
+
       {/* Left Column */}
-      <div className="space-y-6">
+      <div className="space-y-6 items-center text-center md:text-left flex flex-col mt-[80px] md:mt-[0]">
         <img
-          src="https://pawfectwave.vercel.app/img/pc/01/300/300.jpg"
-          alt="Dog"
-          className="w-[500px] h-[500px] rounded-[30px] object-cover mb-[85px]"
-        />
+      src="https://pawfectwave.vercel.app/img/pc/01/300/300.jpg"
+      alt="Dog"
+      className="w-full max-w-[300px] h-auto md:max-w-[500px] md:h-[500px] rounded-[30px] object-cover mb-[40px] md:mb-[85px]"
+    />
 
         <div>
-          <h2 className="text-[60px] font-[600] text-[#3A3A3A] mb-[50px]">Corporate<br /> Identity</h2>
-          <p className="text-[25px] font-[400] text-[#3A3A3A] mb-[22px]">
+          <h2 className="text-[32px] md:text-[60px] font-[600] text-[#3A3A3A] mb-[50px]">Corporate<br /> Identity</h2>
+          <p className="text-[16px] md:text-[25px] font-[400] text-[#3A3A3A] mb-[22px]">
             우리 브랜드의 로고는<br /> 반려동물의 삶과 이별을 따뜻하고 평화로운 시선<br />
             으로 바라보며,그들을 사랑으로 보내는 마지막 순간을<br />
             담아낸 상징입니다.
           </p>
-          <p className="text-[25px] font-[400] text-[#3A3A3A] mb-[22px]">
+          <p className="md:text-[25px] font-[400] text-[#3A3A3A] mb-[22px]">
             가족처럼 소중한 존재였던 반려동물이 떠나는 순간,<br />
             우리는 슬픔보다는 감사와 사랑, 그리고 함께한 추억을 <br />
             기리는 마음을 전하고자 합니다.
           </p>
-          <p className="text-[25px] font-[400] text-[#3A3A3A] mb-[22px]">
+          <p className="md:text-[25px] font-[400] text-[#3A3A3A] mb-[22px]">
             로고의 중심에는 마치 평소처럼 편안하게 잠든 반려동물의 <br />
             모습이 담겨 있습니다. 그 모습은 이별이 아닌 사랑의 <br />
             연장선, 그리고 평화로운 안식의 순간을 상징합니다.
           </p>
-          <p className="text-[25px] font-[400] text-[#3A3A3A] mb-[66px]">
+          <p className="md:text-[25px] font-[400] text-[#3A3A3A] mb-[66px]">
             로고에 사용된 부드러운 곡선과 차분한색감은 이별의<br />
             아픔을 감싸는 위로의 감정과,영원한 사랑이 머무는 <br />
             공간을 표현합니다.
           </p>
         </div>
 
-        <div className="flex flex-col justify-center items-center  bg-white p-4 rounded-xl shadow w-fit w-[500px] h-[500px]">
+        {/* 컬러카드 */}
+          <div className="flex flex-col justify-center items-center bg-white p-4 rounded-xl shadow w-full md:w-[500px] md:h-[500px] mx-auto">
+
           <div className="flex gap-[10px]">
           <svg xmlns="http://www.w3.org/2000/svg" width="101" height="98" viewBox="0 0 101 98" fill="none">
             <path d="M60.6855 0.473633C72.4128 0.473633 81.8206 3.7117 88.9355 10.1611L89.6172 10.7949C96.8037 17.67 100.409 26.8382 100.409 38.3145C100.409 49.4325 97.0008 58.4747 90.1953 65.2227L89.5264 65.8682C82.2733 72.6825 72.5011 76.0986 60.1816 76.0986C55.2779 76.0986 50.7381 75.5371 46.5645 74.4131L45.7344 74.1807C41.334 72.9058 37.1748 70.9673 33.252 68.3682L32.9092 68.1406V97.6855H0.837891V0.473633H60.6855Z" fill="white" stroke="#1E3932" stroke-width="0.44181"/>
           </svg>
           
-          <p className="text-[25px] font-[400] text-[#1E3932]">C 0 M0 Y 0 K 0<br />R 255 G 255 B 255</p>          
+          <p className="md:text-[25px] font-[400] text-[#1E3932]">C 0 M0 Y 0 K 0<br />R 255 G 255 B 255</p>          
         </div>    
-          <p className="text-[25px] font-[500] pb-[40px] ml-0">#FFFFFF</p>
+          <p className="md:text-[25px] font-[500] pb-[40px] ml-0">#FFFFFF</p>
 
           <div className="flex gap-[10px]">
           <svg xmlns="http://www.w3.org/2000/svg" width="101" height="99" viewBox="0 0 101 99" fill="none">
           <path d="M60.6857 0.90625C72.8354 0.90625 82.5287 4.37004 89.77 11.2888C97.0068 18.2119 100.63 27.4413 100.63 38.9682C100.63 50.495 96.9803 59.8216 89.6772 66.6829C82.3741 73.5442 72.5438 76.9726 60.182 76.9726C54.9333 76.9726 50.0955 76.332 45.673 75.0463C41.2504 73.7651 37.0709 71.8167 33.13 69.2056V98.5595H0.617188V0.90625H60.6857Z" fill="#1E3932"/>
         </svg>
 
-          <p className="text-[25px] font-[400] text-[#1E3932]">C 82 M54 Y 69 K 57<br/>R 30 G 57 B 50</p>
+          <p className="md:text-[25px] font-[400] text-[#1E3932]">C 82 M54 Y 69 K 57<br/>R 30 G 57 B 50</p>
           </div>
-          <p className="text-[25px] font-[500]">#1E3932</p>
+          <p className="md:text-[25px] font-[500]">#1E3932</p>
         </div>
       </div>
 
       {/* Center Line */}
-      <div className="relative flex justify-center">
+      <div className="hidden md:flex md:relative justify-center">
         <div
           ref={lineRef}
           className="w-[4px] bg-gray-300 h-full relative overflow-hidden"
         >
           {/* 검정 선 (progress) */}
           <div
-            className="absolute top-0 left-0 w-full bg-black transition-all duration-300"
+            className="hidden md:absolute top-0 left-0 w-full bg-black transition-all duration-300"
             style={{ height: `${progress * 100}%` }}
           ></div>
 
           {/* 초록 점 (고정된 원형) */}
-          <div className="absolute left-1/2 top-0 transform -translate-x-1/2 w-4 h-4 bg-green-500 rounded-full z-10 shadow-md"></div>
+          <div className="hidden md:absolute left-1/2 top-0 transform -translate-x-1/2 w-4 h-4 bg-green-500 rounded-full z-10 shadow-md"></div>
         </div>
       </div>
 
               {/* Right Column */}
-        <div className="flex flex-col space-y-6 items-end text-right ">
-          <div className="self-end mb-[250px]">
-            <h2 className="text-[60px] font-[600] text-[#3A3A3A] mb-2">파우펙트 웨이브<br /> 운영철학</h2>
-            <p className=" text-right text-[20px] font-[600] text-[#3A3A3A]  max-w-[400px]">
+              <div className="flex flex-col space-y-6 items-center md:items-end text-center md:text-right">
+              <div className="mb-[80px] md:mb-[250px] max-w-[90%]">
+              <h2 className="text-[32px] mt-[80px] md:mt-0 md:text-[60px] font-[600] text-[#3A3A3A] mb-2">파우펙트 웨이브<br />운영철학</h2>
+              <p className="text-[16px] md:text-[20px] font-[400] text-[#3A3A3A]">
               &quot;나의 가족을 대하듯, 성실하고 친절하게, 정직한 최고에 서비스를 제공하겠습니다.&quot;
               올바른 반려동물 장례 문화 정착을 시작으로, 첫 만남<br />
               부터 마지막 순간까지 보호자와 반려동물의 행복을 <br />
@@ -101,7 +104,7 @@ export default function PawfectWaveLayout() {
             </p>
           </div>
 
-          <div className="flex flex-col bg-[#1E3932] text-white w-[500px] h-[500px] gap-[72px] p-11 rounded-[80px] space-y-2 self-end mb-[130px]">
+          <div className="flex flex-col bg-[#1E3932] text-white md:w-[500px] md:h-[500px] gap-[72px] p-11 rounded-[80px] space-y-2 md:self-end mb-[130px]">
             <div className='flex gap-[10px]'>
             <svg xmlns="http://www.w3.org/2000/svg" width="85" height="83" viewBox="0 0 85 83" fill="none">
               <path d="M50.7992 0.844727C60.924 0.844727 69.0018 3.73122 75.0362 9.49684C81.0669 15.2661 84.0859 22.9573 84.0859 32.563C84.0859 42.1687 81.0448 49.9408 74.9589 55.6586C68.8729 61.3764 60.6811 64.2334 50.3795 64.2334C46.0056 64.2334 41.9741 63.6995 38.2887 62.6281C34.6032 61.5604 31.1203 59.9368 27.8362 57.7609V82.2224H0.742188V0.844727H50.7992Z" fill="white"/>
@@ -135,7 +138,7 @@ export default function PawfectWaveLayout() {
               <path d="M60.8519 27.6968C58.7496 29.0995 57.1922 31.2754 56.5479 33.7201C56.4706 34.0146 56.4043 34.3129 56.3565 34.6111C56.3013 34.9535 56.2497 35.3143 56.3712 35.6493C56.5369 36.1096 56.9566 36.371 57.4279 36.4409C57.9359 36.5182 58.4735 36.4262 58.9521 36.2531C59.5706 36.0322 60.1671 35.7303 60.7378 35.4063C62.0816 34.6516 63.3003 33.6759 64.3348 32.5309C64.4931 32.3542 64.2317 32.0891 64.0734 32.2695C63.2193 33.2157 62.2399 34.0404 61.1648 34.7215C60.6347 35.0566 60.0787 35.3585 59.5081 35.6199C59.0294 35.8408 58.5361 36.0433 58.0059 36.0875C57.6046 36.1206 57.0965 36.0838 56.8351 35.7303C56.651 35.4837 56.6547 35.1597 56.6952 34.8688C56.7357 34.578 56.7983 34.276 56.8682 33.9852C57.1481 32.8549 57.6267 31.7761 58.271 30.8078C59 29.707 59.9462 28.7534 61.0433 28.0208C61.2422 27.8882 61.0544 27.5679 60.8556 27.7004L60.8519 27.6968Z" fill="#1E3932"/>
               <path d="M70.7663 39.4886C70.3061 40.5931 71.0682 41.8155 72.0696 42.3015C73.2036 42.8574 74.4812 42.3935 75.2949 41.4988C77.4266 39.1499 75.9723 35.6596 74.7168 33.2554C73.9289 31.7422 72.9569 30.3247 71.834 29.0398C71.6757 28.8594 71.4143 29.1245 71.5726 29.3012C72.4894 30.3505 73.2993 31.4918 73.9915 32.6995C74.6837 33.9071 75.3206 35.2472 75.7109 36.6168C76.0754 37.9054 76.1895 39.3524 75.5121 40.56C74.9929 41.4915 73.9547 42.342 72.8207 42.1579C71.6904 41.9701 70.6448 40.7367 71.1271 39.5843C71.2192 39.3634 70.8584 39.2677 70.77 39.4849L70.7663 39.4886Z" fill="#1E3932"/>
             </svg>
-            <p className="text-[43px] font-[600] text-white">awfectWave</p>
+            <p className="md:text-[43px] font-[600] text-white">awfectWave</p>
             </div>
       <svg width="130" height="76" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg" className=''>
         <g id="Group">
@@ -148,9 +151,9 @@ export default function PawfectWaveLayout() {
         </svg>
           </div>
 
-          <div className="self-end">
-            <h2 className="text-[60px] font-[600] text-[#3A3A3A] mb-2  mt-[250px]">Color<br />Regulation</h2>
-            <p className="text-[25px] font-[400] text-[#3A3A3A] ">
+          <div className="self-end text-center md:text-right w-full md:w-auto">
+            <h2 className="text-[32px] md:text-[60px] font-[600] text-[#3A3A3A] mb-2  mt-[80px] md:mt-[250px]">Color<br />Regulation</h2>
+            <p className="md:text-[25px] font-[400] text-[#3A3A3A] mb-[80px]">
               컬러는 여러 그래픽 요소 중 가장 먼저 인식되는 <br />
               식별력이 매우 높은 시각 요소입니다.<br />본 로고는 깨끗하고 순수한 흰색을 기본 색상으로 <br />
               사용하며, 로고 안에는 진녹색으로 강아지 형상을<br />
