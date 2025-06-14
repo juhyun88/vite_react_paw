@@ -76,21 +76,25 @@ function QustionSection() {
             </svg>
               <span className="mt-2 text-[#3A3A3A] text-[20px] font-[400]">방문서비스</span>
             </div>
+
             <div className="flex flex-col items-center w-[146.3px] h-[146.3px] py-[27px] px-[15.5px] gap-[10px]">
-           <svg xmlns="http://www.w3.org/2000/svg" width="147" height="148" viewBox="0 0 147 148" fill="none">
-            <rect x="0.300781" y="0.835938" width="146.3" height="146.3" fill="url(#pattern0_1130_8277)"/>
+           <img
+                                src="https://pawfectwave.vercel.app/img/pc/05/200/insurance200.png"
+                                alt="houes"
+                                className="w-full h-full object-cover"
+                              />
             
-            </svg>
-              <span className="mt-2 text-[#3A3A3A] text-[20px] font-[400]">방문서비스</span>
+            
+              <span className="mt-2 text-[#3A3A3A] text-[20px] font-[400]">보험</span>
             </div>
+
             <div className="flex flex-col items-center w-[146.3px] h-[146.3px] py-[27px] px-[15.5px] gap-[10px]">
-           <svg width="147" height="147" viewBox="0 0 147 147" fill="none" xmlns="http://www.w3.org/2000/svg">
-            
-            
-            
-            
-            </svg>
-              <span className="mt-2 text-[#3A3A3A] text-[20px] font-[400]">방문서비스</span>
+                <img
+                                src="https://pawfectwave.vercel.app/img/pc/05/200/insurance500.png"
+                                alt="houes"
+                                className="w-full h-full object-cover"
+                              />
+              <span className="mt-2 text-[#3A3A3A] text-[20px] font-[400]">찾아오시는길</span>
             </div>
           </div>
         </div>
