@@ -213,12 +213,7 @@ const toggleSubMenu = (code: number) => {
 
                 <div className="hidden lg:flex items-center z-20 ">
                     <ul className="reservation flex justify-end items-center mb-0 p-0 gap-[30px]">
-                        <li>
-                          <Link to="/openapi/map" className="flex flex-col items-center">
-                            <span className="main-primery">지도보기</span>
-                     
-                          </Link>
-                        </li>
+                        
                         
                        
                         <li className="whitespace-nowrap ">

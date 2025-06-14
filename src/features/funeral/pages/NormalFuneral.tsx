@@ -46,7 +46,7 @@ export default function NormalFuneral({ className = "" }: NormalFuneralProps) {
                 <div className="text-[20px] md:text-[25px] font-[500] text-[#A5C1A0]">
                   {item.subtitle}
                 </div>
-                <h3 className="text-[26px] md:text-[35px] font-[700] text-[#1E3932]">
+                <h3 className="text-[24px] md:text-[35px] font-[700] text-[#1E3932]">
                   {item.title}
                   {item.tag && (
                     <span className="text-xs border border-gray-500 px-2 py-1 rounded-full ml-2">
@@ -54,7 +54,7 @@ export default function NormalFuneral({ className = "" }: NormalFuneralProps) {
                     </span>
                   )}
                 </h3>
-                <p className="block text-[16px] md:text-[17px] font-[400] text-[#A5C1A0] whitespace-pre-line">
+                <p className="block text-[12px] md:text-[17px] font-[400] text-[#A5C1A0] whitespace-pre-line">
                   {item.description}
                 </p>
               </div>
@@ -90,7 +90,7 @@ export default function NormalFuneral({ className = "" }: NormalFuneralProps) {
 
       {/* 소개 텍스트 1 */}
       <section className="max-w-[1400px] mx-auto px-4 py-[50px] text-center space-y-4">
-        <h2 className="text-black text-[32px] md:text-[80px] font-[700] leading-snug">
+        <h2 className="text-black text-[30px] md:text-[80px] font-[700] leading-snug">
           모든 이별을 존중하기 위해
         </h2>
         <p className="text-black text-[18px] md:text-[35px] font-[400] mx-auto leading-relaxed">
@@ -110,7 +110,7 @@ export default function NormalFuneral({ className = "" }: NormalFuneralProps) {
 
       {/* 소개 텍스트 2 */}
       <section className="max-w-[1400px] mx-auto px-4 py-16 text-center space-y-4">
-        <h2 className="text-black text-[32px] md:text-[80px] font-[700] leading-snug">
+        <h2 className="text-black text-[24px] md:text-[80px] font-[700] leading-snug">
           우리가 온전히<br className="hidden md:block" /> 이별할 수 있도록
         </h2>
         <p className="text-black text-[18px] md:text-[35px] font-[400] mx-auto leading-relaxed">

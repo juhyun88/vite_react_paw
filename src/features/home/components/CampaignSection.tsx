@@ -24,25 +24,38 @@ function CampaignSection() {
                         <div className="max-w-[1280px] mx-auto px-4">
                             <div className="rounded-lg overflow-hidden flex flex-col md:flex-row gap-[20px]">
                                 {/* 첫 번째 이미지와 텍스트 */}
-                                <div className="w-full md:w-1/2">
-                                    <img
+                               <div className="w-full md:w-1/2">
+                                    <a
+                                        href="https://www.youtube.com/watch?v=1XVqG3kk0cE" // ←  유튜브 링크
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
                                         src="https://pawfectwave.vercel.app/img/pc/youtube/youtube100.jpg"
                                         alt="hospital"
                                         className="w-full h-auto shadow-xl"
-                                    />
-                                    <div className="p-4 text-start md:text-[25px] text-[15px] font-[400]">
-                                        #강아지건강검진#고양이건강검진#분야별특화센터
+                                        />
+                                    </a>
+                                    <div className="p-4 text-start md:text-[25px] text-[13px] font-[400]">
+                                        #강아지건강검진 #고양이건강검진 #분야별특화센터
                                     </div>
-                                </div>
+                                    </div>
+
 
                                 {/* 두 번째 이미지와 텍스트 */}
                                 <div className="w-full md:w-1/2">
+                                 <a
+                                        href="https://www.youtube.com/watch?v=QLmi8sm7yVk" // ←  유튜브 링크
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
                                     <img
                                         src="https://pawfectwave.vercel.app/img/pc/youtube/youtube200.jpg"
                                         alt="hospital"
                                         className="w-full h-auto shadow-xl"
                                     />
-                                    <div className="p-4 text-start md:text-[25px] text-[15px] font-[400]">
+                                    </a>
+                                    <div className="p-4 text-start md:text-[25px] text-[14px] font-[400]">
                                         #강아지건강검진#고양이건강검진#나는수의사다
                                     </div>
                                 </div>

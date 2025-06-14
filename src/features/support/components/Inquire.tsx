@@ -72,22 +72,22 @@ const handlePasswordCheck = () => {
 
   return (
     <div className={className}>
-      <div className="p-4 max-w-4xl mx-auto md:py-[100px] py-[80px]">
-        <h1 className="text-xl font-bold mb-4">
+      <div className="p-4 max-w-[1280px] mx-auto md:py-[100px] py-[80px]">
+        <h1 className="text-center md:text-[40px] text-[26px] font-[600] md:mb-[100px] mb-[80px]">
           문의하신 내용에 대한 답변을 확인하실 수 있습니다.
         </h1>
 
         <table className="w-full border">
           <thead className="bg-gray-100">
-            <tr>
-              <th className="p-2 border">NO.</th>
-              <th className="p-2 border">기관</th>
-              <th className="p-2 border">제목</th>
-              <th className="p-2 border">이름</th>
-              <th className="p-2 border">답변</th>
-              <th className="p-2 border">등록일</th>
-            </tr>
-          </thead>
+              <tr>
+                <th className=" border whitespace-nowrap w-[25px]">NO.</th>
+                <th className="p-2 border whitespace-nowrap w-[120px]">기관</th>
+                <th className="p-2 border whitespace-nowrap">제목</th>
+                <th className="p-2 border whitespace-nowrap w-[100px]">이름</th>
+                <th className="p-2 border whitespace-nowrap w-[100px]">답변</th>
+                <th className="p-2 border whitespace-nowrap w-[94px]">등록일</th>
+              </tr>
+            </thead>
           <tbody>
             {inquiries.map((item, idx) => (
               <tr
@@ -95,19 +95,21 @@ const handlePasswordCheck = () => {
                 className="text-center border-t hover:bg-gray-50 cursor-pointer"
                 onClick={() => handleOpenDetail(item)}
               >
-                <td className="p-2 border">{idx + 1}</td>
-                <td className="p-2 border">{item.category}</td>
-                <td className="p-2 border text-left">
-                        {item.password ? "🔒 " : ""}
-                        {item.title}</td>
-                <td className="p-2 border">{item.author.slice(0, 1)}**</td>
-                <td className="p-2 border">
+                <td className=" border md:w-[150px]">{idx + 1}</td>
+                <td className="p-2 border md:w-[150px] w-[120px]">{item.category}</td>
+                <td className="p-2 border text-left min-w-[99px]">
+                  {item.password ? "🔒 " : ""}
+                  {item.title}
+                </td>
+                <td className="p-2 border w-[80px]">{item.author.slice(0, 1)}**</td>
+                <td className="p-2 border md:w-[150px] w-[100px]">
                   {item.is_answered ? "답변완료" : ""}
                 </td>
-                <td className="p-2 border">{item.created_at?.split("T")[0]}</td>
+                <td className="border md:w-[150px] w-[94px] text-[15px]">{item.created_at?.split("T")[0]}</td>
               </tr>
             ))}
           </tbody>
+
         </table>
 
         <div className="mt-4 text-right">

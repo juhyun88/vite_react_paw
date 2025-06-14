@@ -21,8 +21,8 @@ function Question({ className }: { className: string }) {
   };
 
   return (
-    <div className={`max-w-[1400px] mx-auto my-[100px] p-[20px] ${className}`}>
-      <h1 className="text-[35px] font-[400] text-center mb-[50px]">자주 문의하는 질문에 대한 답변을 확인하실수 있습니다.</h1>
+    <div className={`max-w-[1400px] mx-auto my-[80px] md:my-[100px] p-[20px] ${className}`}>
+      <h1 className="text-[26px] md:text-[40px] font-[600] text-center mb-[80px] md:mb-[100px]">자주 문의하는 질문에 대한 답변을 확인하실수 있습니다.</h1>
 
       <div className="border-t border-b border-gray-300">
         {faqData.map((faq, index) => (
@@ -32,10 +32,10 @@ function Question({ className }: { className: string }) {
               onClick={() => toggleAnswer(index)}
             >
               <div className="flex items-center gap-[20px]">
-                <span className="text-[24px] font-bold text-[#4C9C8B]">Q</span>
-                <span className="text-[20px] font-medium">{faq.question}</span>
+                <span className="md:text-[24px] font-bold text-[#4C9C8B]">Q</span>
+                <span className="text-[15px] md:text-[20px] font-medium">{faq.question}</span>
               </div>
-              <span className="text-[24px] font-bold text-gray-500 transition-transform duration-200">
+              <span className="md:text-[24px] font-bold text-gray-500 transition-transform duration-200">
                 {openIndex === index ? "▼" : "▲"}
               </span>
             </div>

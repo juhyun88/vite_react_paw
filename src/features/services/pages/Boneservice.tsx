@@ -95,7 +95,7 @@ function Boneservice({ className }: { className?: string }) {
           <button
             key={tab.key}
             onClick={() => handleTabClick(tab.key)}
-            className={`px-5 py-2 rounded-full border text-sm md:text-base transition-all duration-200
+            className={`px-2 py-2 rounded-full border text-sm md:text-base transition-all duration-200
               ${
                 activeTab === tab.key
                   ? "bg-[#4C9C8B] text-white border-[#4C9C8B]"

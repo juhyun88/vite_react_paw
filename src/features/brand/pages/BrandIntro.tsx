@@ -28,23 +28,23 @@ export default function PawfectWaveLayout() {
     />
 
         <div>
-          <h2 className="text-[32px] md:text-[60px] font-[600] text-[#3A3A3A] mb-[50px]">Corporate<br /> Identity</h2>
-          <p className="text-[16px] md:text-[25px] font-[400] text-[#3A3A3A] mb-[22px]">
+          <h2 className="text-[30px] md:text-[60px] font-[600] text-[#3A3A3A] mb-[50px]">Corporate<br /> Identity</h2>
+          <p className="text-[14px] md:text-[25px] font-[400] text-[#3A3A3A] mb-[22px]">
             우리 브랜드의 로고는<br /> 반려동물의 삶과 이별을 따뜻하고 평화로운 시선<br />
             으로 바라보며,그들을 사랑으로 보내는 마지막 순간을<br />
             담아낸 상징입니다.
           </p>
-          <p className="md:text-[25px] font-[400] text-[#3A3A3A] mb-[22px]">
+          <p className=" text-[14px] md:text-[25px] font-[400] text-[#3A3A3A] mb-[22px]">
             가족처럼 소중한 존재였던 반려동물이 떠나는 순간,<br />
             우리는 슬픔보다는 감사와 사랑, 그리고 함께한 추억을 <br />
             기리는 마음을 전하고자 합니다.
           </p>
-          <p className="md:text-[25px] font-[400] text-[#3A3A3A] mb-[22px]">
+          <p className="text-[13px] md:text-[25px] font-[400] text-[#3A3A3A] mb-[22px]">
             로고의 중심에는 마치 평소처럼 편안하게 잠든 반려동물의 <br />
             모습이 담겨 있습니다. 그 모습은 이별이 아닌 사랑의 <br />
             연장선, 그리고 평화로운 안식의 순간을 상징합니다.
           </p>
-          <p className="md:text-[25px] font-[400] text-[#3A3A3A] mb-[66px]">
+          <p className="text-[14px] md:text-[25px] font-[400] text-[#3A3A3A] mb-[66px]">
             로고에 사용된 부드러운 곡선과 차분한색감은 이별의<br />
             아픔을 감싸는 위로의 감정과,영원한 사랑이 머무는 <br />
             공간을 표현합니다.
@@ -95,7 +95,7 @@ export default function PawfectWaveLayout() {
               <div className="flex flex-col space-y-6 items-center md:items-end text-center md:text-right">
               <div className="mb-[80px] md:mb-[250px] max-w-[90%]">
               <h2 className="text-[32px] mt-[80px] md:mt-0 md:text-[60px] font-[600] text-[#3A3A3A] mb-2">파우펙트 웨이브<br />운영철학</h2>
-              <p className="text-[16px] md:text-[20px] font-[400] text-[#3A3A3A]">
+              <p className="text-[14px] md:text-[20px] font-[400] text-[#3A3A3A]">
               &quot;나의 가족을 대하듯, 성실하고 친절하게, 정직한 최고에 서비스를 제공하겠습니다.&quot;
               올바른 반려동물 장례 문화 정착을 시작으로, 첫 만남<br />
               부터 마지막 순간까지 보호자와 반려동물의 행복을 <br />
@@ -153,7 +153,7 @@ export default function PawfectWaveLayout() {
 
           <div className="self-end text-center md:text-right w-full md:w-auto">
             <h2 className="text-[32px] md:text-[60px] font-[600] text-[#3A3A3A] mb-2  mt-[80px] md:mt-[250px]">Color<br />Regulation</h2>
-            <p className="md:text-[25px] font-[400] text-[#3A3A3A] mb-[80px]">
+            <p className="text-[15px] md:text-[25px] font-[400] text-[#3A3A3A] mb-[80px]">
               컬러는 여러 그래픽 요소 중 가장 먼저 인식되는 <br />
               식별력이 매우 높은 시각 요소입니다.<br />본 로고는 깨끗하고 순수한 흰색을 기본 색상으로 <br />
               사용하며, 로고 안에는 진녹색으로 강아지 형상을<br />

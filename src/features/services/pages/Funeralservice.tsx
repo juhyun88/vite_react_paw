@@ -21,11 +21,11 @@ function Funeralservice({className} : {className:string}) {
             return (
                 <div className={className}>
                     <div className={`${className} flex justify-center bg-[#F7F7F5]`}>
-                <div className="w-[1280px] mx-auto">
+                <div className="w-[1280px] mx-auto px-4">
                 {/* Hero Section */}
                         <section className="flex flex-col justify-center text-center md:my-[100px] my-[80px]">
-                            <h1 className=" text-[35px] md:text-[80px] text-[#3A3A3A] font-[700] md:mb-[100px] mb-[80px]">파우펙트 웨이브의 운구 서비스</h1>
-                            <p className="text-[19px] md:text-[35px] text-[#3A3A3A] font-[400] md:mb-[50px]">장례식장 방문 시, 차량이 없거나 운전이 불가능할 경우<br />
+                            <h1 className=" text-[42px] md:text-[80px] text-[#3A3A3A] font-[700] md:mb-[100px] mb-[80px]">파우펙트 웨이브의 운구 서비스</h1>
+                            <p className="text-[14px] md:text-[35px] text-[#3A3A3A] font-[400] md:mb-[50px]">장례식장 방문 시, 차량이 없거나 운전이 불가능할 경우<br />
                             운구차량으로 보호자님과 아이를 안전하게 모시는 서비스입니다.</p>
                          </section>
                     
@@ -33,7 +33,7 @@ function Funeralservice({className} : {className:string}) {
             {tabList.map((tab) => (
                 <button
                 key={tab.key}
-                className={`px-6 py-2 rounded-full border text-sm md:text-base transition-all duration-200
+                className={`px-2 py-2 rounded-full border text-[12px] md:text-base transition-all duration-200
                     ${
                     activeTab === tab.key
                         ? "bg-[#4C9C8B] text-white border-[#4C9C8B]"
@@ -62,15 +62,17 @@ function Funeralservice({className} : {className:string}) {
                     <div className="overflow-x-auto">
                         <table className="w-full text-[17px] md:text-[25px] font-[400] border border-gray-200 ">
                         <thead>
-                            <tr className="bg-[#A5C1A0] text-center text-white py-[50px]">
-                            <th className="border border-gray-200 px-4 py-[50px] w-1/6">이용지점</th>
-                            <th className="border border-gray-200 px-4  py-[50px]">출발 지역 : 서울시</th>
-                            <th className="border border-gray-200 px-4  py-[50px] w-1/6">비용</th>
+                            <tr className="bg-[#A5C1A0] text-center text-white">
+                               <th className="border border-gray-200 px-[12px] md:py-[50px] w-1/6 whitespace-nowrap">
+  이용지점</th>
+                                <th className="border border-gray-200 md:px-4 px-0 md:py-[50px] whitespace-nowrap">출발 지역 : 서울시</th>
+                                <th className="border border-gray-200 px-2 md:py-[50px] w-1/6">비용</th>
                             </tr>
-                        </thead>
+                            </thead>
+
                         <tbody>
                             <tr className="border-t border-gray-200">
-                            <td className="border border-gray-200 px-4 md:py-[40px] py-[20px] text-[13px] md:text-[20px] font-[400]" rowSpan={2}>
+                            <td className="border border-gray-200 px-2 md:py-[40px] py-[20px] text-[13px] md:text-[20px] font-[400]" rowSpan={2}>
                                 경기 / 광주점<br />(1호점)
                             </td>
                             <td className="border border-gray-200 px-4 md:py-[40px] py-[20px] text-[13px] md:text-[18px] font-[400]">
@@ -86,7 +88,7 @@ function Funeralservice({className} : {className:string}) {
                             </td>
                             </tr>
                             <tr className="border-t border-gray-200">
-                            <td className="border border-gray-200 px-4 md:py-[40px] py-[20px] text-[12px] md:text-[20px] font-[400]" rowSpan={2}>
+                            <td className="border border-gray-200 px-2 md:py-[40px] py-[20px] text-[13px] md:text-[20px] font-[400]" rowSpan={2}>
                                 남양주점<br />(3호점)
                             </td>
                             <td className="border border-gray-200 px-4 md:py-[40px] py-[20px] text-[13px] md:text-[18px] font-[400]">
@@ -106,7 +108,7 @@ function Funeralservice({className} : {className:string}) {
                     </div>
 
                     {/* 하단 안내 문구 */}
-                    <div className="text-[15px] md:text-[18px] font-[400] my-[100px] space-y-1 leading-relaxed">
+                    <div className="text-[12px] md:text-[18px] font-[400] my-[100px] space-y-1 leading-relaxed">
                         <p>※ 운구서비스 이용 시, 아이를 직접 안고 탑승해주세요.</p>
                         <p>
                         ※ 운구서비스는 출발지에서 파우펙트 웨이브 반려동물 장례식장까지 오시는

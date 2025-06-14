@@ -21,11 +21,11 @@ function Noncompaniedservice({className} : {className:string}) {
         <div className={className}>
             <div className="max-w-[1280px] w-full mx-auto px-4 md:py-[100px] py-[80px] bg-[#f4f6f3]">
                 {/* 탭 */}
-                <div className="flex justify-center gap-2 sm:gap-4 flex-wrap bg-[#F7F7F7]">
+                <div className="flex justify-center gap-2 sm:gap-4 bg-[#F7F7F7]">
                 {tabList.map((tab) => (
                     <button
                     key={tab.key}
-                    className={`px-4 sm:px-6 py-2 rounded-full border text-sm sm:text-base transition-all duration-200 ${
+                    className={`px-2 sm:px-6 py-2 rounded-full border text-[13px] sm:text-base transition-all duration-200 ${
                         activeTab === tab.key
                         ? "bg-[#4C9C8B] text-white border-[#4C9C8B]"
                         : "bg-white text-[#4C9C8B] border-[#4C9C8B] hover:bg-[#e9f4f1]"
@@ -44,7 +44,7 @@ function Noncompaniedservice({className} : {className:string}) {
                     alt="펫로스 메인"
                     className="absolute inset-0 w-full h-full object-cover object-center"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col text-white px-6 sm:px-20 justify-center">
+                <div className="absolute inset-0 bg-opacity-40 flex flex-col text-white px-3 sm:px-20 justify-center">
                     <h2 className="text-sm sm:text-3xl font-medium mb-2">파우펙트 웨이브 비동행 장례 서비스</h2>
                     <h1 className="text-xl sm:text-6xl font-bold text-[#E8E8E8] leading-tight">
                     함께하지 못해도 <br />마음은 더 가까이
@@ -70,7 +70,7 @@ function Noncompaniedservice({className} : {className:string}) {
             {/* 비교 박스 */}
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-8 my-20">
                 {/* 일반장례 */}
-                    <div className="w-full max-w-[500px] bg-[#F0E2DC] rounded-lg shadow overflow-hidden">
+                    <div className="w-full max-w-[500px] md:bg-[#F0E2DC] rounded-lg md:shadow overflow-hidden">
                         <div className="bg-[#E8CFC2] text-white text-center py-6 text-xl sm:text-4xl font-bold">일반장례</div>
                             <div className="bg-white text-[#BF957F] p-6 text-left text-base sm:text-2xl font-medium">
                             1. 보호자 직접 방문<br /><br />
@@ -92,7 +92,7 @@ function Noncompaniedservice({className} : {className:string}) {
 
                {/* 절차 박스 */}
                     <div className="space-y-20">
-                        <h3 className="text-center text-2xl sm:text-5xl font-semibold">
+                        <h3 className="text-center text-[18px] sm:text-5xl font-semibold">
                             “왜 비동행 장례를 이용하게 되었을까요?”
                         </h3>
 
@@ -120,7 +120,7 @@ function Noncompaniedservice({className} : {className:string}) {
 
                             <div className="mb-20 px-6">
                                 <p className="text-xl sm:text-5xl font-medium">집에서 다시 집으로</p>
-                                <p className="text-base sm:text-2xl font-light mt-2">파우펙트 웨이브가 장례를 대신 진행합니다.</p>
+                                <p className="text-[15px] sm:text-2xl font-light mt-2">파우펙트 웨이브가 장례를 대신 진행합니다.</p>
                             </div>
                         </div>
                     </div>

@@ -1,3 +1,5 @@
+import KakaoMap from "../KakaoMap";
+
 function BranchIntro({ className }: { className: string }) {
     return (
       <div className={`${className} flex justify-center bg-[#F7F7F5]`}>
@@ -52,6 +54,13 @@ function BranchIntro({ className }: { className: string }) {
                     
             </div>
           </section>
+          <section className="py-[80px] md:py-[120px]">
+            
+          <h2 className="text-[25px] md:text-[40px] font-bold text-center text-[#3A3A3A] mb-8">
+            오시는 길
+          </h2>
+          <KakaoMap />
+        </section>
         </div>
       </div>
     );

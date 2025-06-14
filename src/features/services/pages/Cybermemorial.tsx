@@ -35,7 +35,7 @@ const tabList = [
     label: "온라인 추모관",
     content: (setSelectedMemorial: (value: Memorial) => void) => (
       <div className="max-w-[1280px] mx-auto space-y-12 px-4 text-center">
-        <h2 className="text-[32px] sm:text-[40px] md:text-[60px] lg:text-[80px] font-bold leading-snug my-10 md:my-20">
+        <h2 className="text-[23px] sm:text-[40px] md:text-[60px] lg:text-[80px] font-bold leading-snug my-10 md:my-20">
           기억되는 모든 추억들을 담아<br />
           슬픔을 치유하는 ‘안녕’의 공간
         </h2>
@@ -103,12 +103,12 @@ function Cybermemorial({ className }: { className?: string }) {
 
   return (
     <div className={`${className} max-w-[1280px] mx-auto my-20 px-4`}>
-      <div className="tab-menu flex flex-wrap justify-center gap-2 sm:gap-4 pb-6">
+      <div className="tab-menu flex justify-center gap-2 sm:gap-4 pb-6">
         {tabList.map(tab => (
           <button
             key={tab.key}
             onClick={() => handleTabClick(tab.key)}
-            className={`md:px-3 md:py-1 px-4 py-2 rounded-full border text-[13px] md:text-sm md:text-base transition-all duration-200
+            className={`md:px-4 md:py-2 px-1 py-2 rounded-full border text-[11px] md:text-[14px] md:text-sm md:text-base transition-all duration-200
               ${
                 activeTab === tab.key
                   ? "bg-[#4C9C8B] text-white border-[#4C9C8B]"

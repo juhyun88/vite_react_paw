@@ -16,7 +16,7 @@ export default function StoneFuneral({ className = "" }: StoneFuneralProps) {
         />
 
         <div className="h-auto md:h-[191px] bg-[#C3B3A3] flex items-center justify-center px-4 py-6 md:pr-[560px]">
-          <p className="text-white text-[16px] md:text-[21px] font-[400] leading-relaxed text-left md:text-center">
+          <p className="text-white text-[13px] md:text-[21px] font-[400] leading-relaxed text-left md:text-center">
             • 파워펙트웨이브는 체중에 따른 kg당 추가금이 없습니다.<br />
             • 모든 서비스는 비용은 부가세(VAT) 포함 금액입니다.<br />
             • 모든 서비스에는 [염습, 단독추모실, 개별화장, 유골함, 보자기]가 포함되어 있습니다.<br />
@@ -55,7 +55,7 @@ export default function StoneFuneral({ className = "" }: StoneFuneralProps) {
                     </span>
                   )}
                 </h3>
-                <p className="block text-[15px] md:text-[17px] font-[400] text-[#A5C1A0] whitespace-pre-line">
+                <p className="block text-[13px] md:text-[17px] font-[400] text-[#A5C1A0] whitespace-pre-line">
                   {item.description}
                 </p>
               </div>
