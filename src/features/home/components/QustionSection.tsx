@@ -1,6 +1,15 @@
+import { useState } from "react";
+
 // 질문 섹션
 
+
 function QustionSection() {
+   const [searchTerm, setSearchTerm] = useState("");
+   const handleSearch = () => {
+  // 추후 API 검색 연결 가능
+  console.log("검색 실행");
+};
+
     return (
            <div className="hidden md:inline text-gray-800">
       {/* 검색 영역 */}
@@ -11,7 +20,9 @@ function QustionSection() {
             {['펫로스케어', '지점안내', '비용', '비동행장례', '자주묻는질문'].map((label) => (
               <span
                 key={label}
-                className="px-3 py-1 text-[25px] text-[#1E3932] font-[500] rounded-full cursor-pointer"
+                onClick={() => setSearchTerm(label)}
+                
+                className="px-3 py-1 text-[25px] text-[#1E3932] font-[500] rounded-full cursor-pointer hover:underline transition"
               >
                 #{label}
               </span>
@@ -19,11 +30,14 @@ function QustionSection() {
           </div>
           <div className="flex items-center  border-[4px] border-[#1E3932] rounded-full px-4 h-[70px] w-[935px] shadow-md mb-[100px]">
             <input
+             value={searchTerm}
+             onChange={(e) => setSearchTerm(e.target.value)}
               type="text"
               placeholder="검색어를 입력해주세요"
               className="flex-1 outline-none px-2 text-[25px] font-[400] bg-transparent"
+               onKeyDown={(e) => { if (e.key === "Enter") handleSearch(); }}
             />
-            <button className="text-gray-500">
+            <button className="text-gray-500" onClick={handleSearch}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="37" viewBox="0 0 34 37" fill="none">
                     <path d="M5.75586 7.9502C10.7041 3.24776 18.5238 3.24872 23.4922 7.94922L23.7305 8.18066L23.7314 8.18164L23.9561 8.41211C26.2471 10.8177 27.4999 13.955 27.5 17.2871C27.5 20.6194 26.2472 23.7574 23.9561 26.1631L23.7314 26.3936C22.6101 27.5144 21.2917 28.4182 19.8438 29.0596L19.5527 29.1836C18.0879 29.7899 16.5245 30.1208 14.9414 30.1592L14.625 30.1621C13.0397 30.1626 11.4688 29.8711 9.99121 29.3018L9.69727 29.1836C8.23261 28.5774 6.89318 27.7066 5.74609 26.6152L5.51855 26.3936C3.0847 23.9596 1.75 20.7268 1.75 17.2871C1.75012 13.8476 3.08482 10.6155 5.51855 8.18164L5.75586 7.9502ZM14.1641 7.67383C12.0138 7.7767 9.89217 8.60005 8.18359 10.1445L7.82324 10.4863C6.0043 12.3054 5.00012 14.7207 5 17.2871C5 19.8533 6.00382 22.2688 7.82227 24.0879L8.16895 24.416C9.9364 26.0078 12.2352 26.8945 14.625 26.8945C17.1742 26.8945 19.6201 25.8853 21.4277 24.0879C23.2462 22.2688 24.25 19.8533 24.25 17.2871C24.2499 14.7207 23.2457 12.3054 21.4268 10.4863L21.4258 10.4854C20.646 9.70167 19.737 9.05969 18.7402 8.58691L18.3076 8.39453C17.1406 7.91009 15.8886 7.66089 14.625 7.66211L14.1641 7.67383Z" fill="#1E3932" stroke="#1E3932"/>
                     <path d="M18.4297 24.1104C19.0751 23.5814 20.0036 23.6198 20.6084 24.2246L28.2139 31.8291L28.3271 31.9541C28.8214 32.5566 28.8213 33.4063 28.3271 34.0088L28.2139 34.1338C27.8963 34.4514 27.4772 34.618 27.0732 34.6182H27.0508V34.6172C26.8896 34.6186 26.7295 34.5954 26.5762 34.5479L26.4238 34.4922C26.2294 34.4089 26.0548 34.286 25.9092 34.1328V34.1338L18.3047 26.5283C17.6594 25.8831 17.6594 24.8699 18.3047 24.2246L18.4297 24.1104Z" fill="#1E3932" stroke="#1E3932"/>
@@ -77,7 +91,7 @@ function QustionSection() {
               <span className="mt-2 text-[#3A3A3A] text-[20px] font-[400]">방문서비스</span>
             </div>
 
-            <div className="flex flex-col items-center w-[146.3px] h-[146.3px] py-[27px] px-[15.5px] gap-[10px]">
+            <div className="flex flex-col items-center bottom-0 w-[146.3px] h-[140.3px] pb-[50px]  px-[24px]">
            <img
                                 src="https://pawfectwave.vercel.app/img/pc/05/200/insurance200.png"
                                 alt="houes"
@@ -88,7 +102,7 @@ function QustionSection() {
               <span className="mt-2 text-[#3A3A3A] text-[20px] font-[400]">보험</span>
             </div>
 
-            <div className="flex flex-col items-center w-[146.3px] h-[146.3px] py-[27px] px-[15.5px] gap-[10px]">
+            <div className="flex flex-col items-center w-[146.3px] h-[153.3px] pb-[65px] px-[15.5px] gap-[10px]">
                 <img
                                 src="https://pawfectwave.vercel.app/img/pc/05/200/insurance500.png"
                                 alt="houes"

@@ -1,6 +1,5 @@
 import React from "react";
 import Measure from './components/Measure';
-import Insurance from './components/Insurance';
 import Petroscare from './components/Petroscare';
 import Question from './components/Question';
 import Inquire from './components/Inquire';
@@ -12,7 +11,6 @@ type SupportProps = {
 
 const COMPONENT_MAP = {
     Measure: Measure as React.FC<{ className?: string }>,
-    insurance: Insurance as React.FC<{ className?: string }>,
     petlose: Petroscare as React.FC<{ className?: string }>,
     question: Question as React.FC<{ className?: string }>,
     inquire: Inquire as React.FC<{ className?: string }>,

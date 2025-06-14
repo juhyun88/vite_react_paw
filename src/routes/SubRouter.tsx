@@ -14,7 +14,6 @@ import Cybermemorial from "../features/services/pages/Cybermemorial";
 import Funeralservice from "../features/services/pages/Funeralservice";
 import Boneservice from "../features/services/pages/Boneservice";
 import Measure from "../features/support/components/Measure";
-import Insurance from "../features/support/components/Insurance";
 import Petroscare from "../features/support/components/Petroscare";
 import Question from "../features/support/components/Question";
 import Inquire from "../features/support/components/Inquire";
@@ -32,7 +31,6 @@ export type ValidComponentPath =
   | "funeralservice"
   | "noncompaniedservice"
   | "measure"
-  | "insurance"
   | "petlose"
   | "question"
   | "inquire";
@@ -54,7 +52,6 @@ const COMPONENT_MAP: Record<ValidComponentPath, React.FC<ComponentProps>> = {
   funeralservice: Funeralservice,
   noncompaniedservice: Noncompaniedservice,
   measure: Measure,
-  insurance: Insurance,
   petlose: Petroscare,
   question: Question,
   inquire: Inquire,

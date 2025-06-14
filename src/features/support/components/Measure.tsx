@@ -9,18 +9,18 @@ interface InfoCardProps {
 
 const InfoCard: React.FC<InfoCardProps> = ({ number, title, list, image }) => {
   return (
-    <div className="w-full h-[376px] flex flex-col md:flex-row overflow-hidden rounded-xl shadow-md mb-6">
+    <div className="w-full h-[376px]  flex flex-col md:flex-row overflow-hidden rounded-xl shadow-md mb-[50px]">
       {/* 이미지 영역 */}
-      <div className="w-full md:w-1/2 h-[200px] md:h-full">
+      <div className="w-full md:w-1/2 h-[200px]   md:h-full">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover rounded-[40px]"
         />
       </div>
 
       {/* 텍스트 영역 */}
-      <div className="w-full md:w-1/2 bg-white px-6 py-6 flex flex-col justify-center">
+      <div className="w-full md:w-1/2 px-6 py-6 flex flex-col justify-center ">
         <h3 className="text-lg font-bold text-gray-600 mb-2">
           {number} <span className="text-black text-xl ml-2">{title}</span>
         </h3>
