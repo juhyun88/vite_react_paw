@@ -54,12 +54,14 @@ function BranchIntro({ className }: { className: string }) {
                     
             </div>
           </section>
-          <section className="py-[80px] md:py-[120px]">
+          <section className="pb-[80px] md:pb-[100px]">
             
-          <h2 className="text-[25px] md:text-[40px] font-bold text-center text-[#3A3A3A] mb-8">
+          <h2 className="text-[25px] md:text-[70px] font-bold text-center text-[#3A3A3A] mb-[80px] md:mb-[100px]">
             오시는 길
           </h2>
+          
           <KakaoMap />
+        
         </section>
         </div>
       </div>
