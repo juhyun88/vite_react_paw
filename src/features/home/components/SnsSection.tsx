@@ -31,9 +31,9 @@ function SnsSection() {
                 <div className="flex md:justify-center items-center max-w-[1400px] mx-auto py-[50px] md:py-[100px] px-4 md:px-8">
                     <Swiper
                         modules={[Navigation, Pagination, Autoplay]}
-                        slidesPerView={3} // 모바일에서는 1개만
+                        slidesPerView={1} // 모바일에서는 1개만
                         centeredSlides={true}
-                        spaceBetween={10}
+                        spaceBetween={20} // 슬라이드 간의 간격 조정 (기존 10px에서 20px로)
                         pagination={{ clickable: true }}
                         navigation
                         loop={true}
@@ -43,12 +43,12 @@ function SnsSection() {
                             disableOnInteraction: false,
                         }}
                         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-                        className="pb-12 w-full overflow-visible"
-                        style={{ overflow: 'visible' }}
+                        className="pb-12 w-full" // overflow-visible 클래스 및 style={{ overflow: 'visible' }} 속성 제거
+                        // style={{ overflow: 'visible' }} 이 부분을 제거합니다.
                         breakpoints={{
                             768: {
                                 slidesPerView: 3, // 데스크톱에서는 3개 (좌1 + 중앙1 + 우1)
-                                spaceBetween: 10,
+                                spaceBetween: 20, // 데스크톱 슬라이드 간의 간격 조정
                             },
                         }}
                     >
@@ -60,8 +60,8 @@ function SnsSection() {
                                     <div className="flex justify-center items-center h-full px-2">
                                         <div
                                             className={`transition-all duration-500 ease-in-out rounded-lg shadow-xl border bg-white overflow-hidden
-                                                ${isActive 
-                                                    ? 'w-[450px] h-[290px] z-30 scale-100' 
+                                                ${isActive
+                                                    ? 'w-[450px] h-[343px] z-30 scale-100'
                                                     : 'w-[320px] h-[266px] z-10 scale-90 opacity-70'
                                                 }
                                             `}
