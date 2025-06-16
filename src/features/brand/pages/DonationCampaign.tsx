@@ -3,7 +3,7 @@ const DonationCampaign = () => {
     <div className="bg-[#F7F7F5]">
       {/* Hero Section */}
       <section className="text-center px-4 py-[80px] md:py-[100px]">
-        <h1 className="text-[38px] md:text-[80px] text-[#3A3A3A] font-[700] mb-[40px] md:mb-[100px] leading-tight">
+        <h1 className="text-[25px] md:text-[80px] text-[#3A3A3A] font-[700] mb-[40px] md:mb-[100px] leading-tight">
           파우펙트 웨이브의 기부 캠페인
         </h1>
 
@@ -49,7 +49,7 @@ const DonationCampaign = () => {
 
       {/* 기부단체 소개 */}
       <section className="bg-[#F7F7F5] pt-[60px] md:pt-[100px] px-4">
-        <h2 className="text-[32px] md:text-[80px] text-[#3A3A3A] font-[700] text-center mb-[40px] md:mb-[100px]">
+        <h2 className="text-[25px] md:text-[80px] text-[#3A3A3A] font-[700] text-center mb-[40px] md:mb-[100px]">
           기부단체 소개
         </h2>
         <div className="w-full flex justify-center">

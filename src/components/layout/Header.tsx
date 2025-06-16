@@ -35,7 +35,7 @@ const toggleSubMenu = (code: number) => {
 
   useEffect(() => {
   const handleScroll = () => {
-    setScrolled(window.scrollY > 700);
+    setScrolled(window.scrollY > 200);
   };
 
   

@@ -108,7 +108,7 @@ function Cybermemorial({ className }: { className?: string }) {
           <button
             key={tab.key}
             onClick={() => handleTabClick(tab.key)}
-            className={`md:px-4 md:py-2 px-1 py-2 rounded-full border text-[11px] md:text-[14px] md:text-sm md:text-base transition-all duration-200
+            className={`md:px-4 md:py-2 px-[3px] py-2 rounded-full border text-[11px] md:text-[14px] md:text-sm md:text-base transition-all duration-200
               ${
                 activeTab === tab.key
                   ? "bg-[#4C9C8B] text-white border-[#4C9C8B]"

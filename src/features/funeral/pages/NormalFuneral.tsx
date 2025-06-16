@@ -15,7 +15,7 @@ export default function NormalFuneral({ className = "" }: NormalFuneralProps) {
           className="w-full object-cover"
         />
         <div className="h-auto md:h-[191px] bg-[#C3B3A3] flex flex-col md:flex-row items-center justify-center px-6 md:pr-[560px] py-6">
-          <p className="text-white text-sm md:text-[21px] font-[400] leading-relaxed text-center md:text-left">
+          <p className="text-white text-[13px] md:text-[21px] font-[400] leading-relaxed text-center md:text-left">
             • 파워펙트웨이브는 체중에 따른 kg당 추가금이 없습니다.<br />
             • 모든 서비스는 비용은 부가세(VAT) 포함 금액입니다.<br />
             • 모든 서비스에는 [염습, 단독추모실, 개별화장, 유골함, 보자기]가 포함되어 있습니다.<br />
